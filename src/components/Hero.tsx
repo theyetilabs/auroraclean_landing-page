@@ -1,0 +1,137 @@
+"use client";
+import StudentAvatars from "./StudentAvatars";
+import { MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import StatsCounter from "./StatsCounter";
+
+const texts = ["— हाम्रो साथले सहज।", "— Konnichiwa. こんにちは"];
+
+const stats = [
+  { number: "4000+", label: "Students Empowered", duration: 2000 },
+  { number: "99.99%", label: "VISA Success Rate", duration: 2500 },
+  { number: "99.99%", label: "Job Placement", duration: 2500 },
+  { number: "300+", label: "Companies/Partners", duration: 2000 },
+  { number: "5+", label: "Years of Expertise", duration: 1500 },
+  { number: "4+", label: "Branches in Nepal", duration: 1500 },
+];
+
+export default function Hero() {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        setIsAnimating(false);
+      }, 600); // Match this with animation duration
+    }, 3000); // Change text every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <>
+      <section className="relative min-h-[90vh] overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/images/hero-placeholder.png" // Add a poster image for better initial load
+          >
+            <source src="/video/hero.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white  w-1/2 " />
+        </div>
+
+        {/* Content */}
+        <div className="container relative mx-auto px-4 py-16  md:py-24 font-inter">
+          <div className="flex flex-col gap-6 max-w-3xl mt-20  ">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#00378b]">
+              Your SSW Journey to
+              <br />
+              Japan
+              <br />
+              <div className="flip-container  overflow-hidden mt-4">
+                <span
+                  className={`text-3xl md:text-5xl block ${
+                    isAnimating ? "animate-flip-out" : "animate-flip-in"
+                  }`}
+                >
+                  {texts[currentTextIndex]}
+                </span>
+              </div>
+            </h1>
+            <p className="text-lg text-[#00378b]">
+              Work in Japan: Learn Japanese in Nepali way
+            </p>
+
+            {/* Student Count Section */}
+            <div className="flex items-center gap-4 text-white">
+              <StudentAvatars />
+              <span className="font-medium text-[#00378b]">
+                4000+ Students Enrolled
+              </span>
+            </div>
+
+            {/* Consultation Button */}
+            <div className="flex">
+              <a
+                href="https://forms.gle/zUzeXaLBSKGPeUiu7"
+                target="_blank"
+                className="group flex items-center gap-2 bg-[#00378b] hover:bg-[#0099db] text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <MessageCircle className="w-6 h-6" />
+                <span>Free Consultation</span>
+                <svg
+                  className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="bg-[#00378b] py-4 relative">
+        {/* Horizontal Line */}
+        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2">
+          <div className="border-t border-white/20 w-full"></div>
+        </div>
+
+        {/* Vertical Lines */}
+        <div className="hidden lg:block absolute top-8 bottom-8 left-1/3 w-px bg-white/20"></div>
+        <div className="hidden lg:block absolute top-8 bottom-8 left-2/3 w-px bg-white/20"></div>
+
+        <div className="container relative mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+            {stats.map((stat, index) => (
+              <StatsCounter
+                key={index}
+                number={stat.number}
+                label={stat.label}
+                duration={stat.duration}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
