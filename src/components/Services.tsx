@@ -1,132 +1,106 @@
 "use client";
+import React from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import { useRef, useState } from "react";
 
-const services = [
+interface Service {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const services: Service[] = [
   {
-    title: "Nursing Care (介護)",
+    title: "House cleaning",
+    description:
+      "Our professional home cleaning services are designed to give you a spotless home without the hassle. We provide customized cleaning that fits your needs and schedule.",
     image: "/images/Sectors/sector-01.png",
-    icon: "🏥",
   },
   {
-    title: "Food Service (外食業)",
+    title: "Office cleaning",
+    description:
+      "If you need recurring cleaning at the office or you just want us to come for a one-off visit, we can accommodate you. We clean for parties and other special events, and we can make your office space look its best.",
     image: "/images/Sectors/sector-02.png",
-    icon: "🍽️",
   },
   {
-    title: "Agriculture (農業)",
+    title: "Deep cleaning",
+    description:
+      "Are there parts of your homeland you just never feel like cleaning because they're too much of a challenge? Maybe you're thinking of the oven or the basement and you dread having to clean these areas.",
     image: "/images/Sectors/sector-03.png",
-    icon: "🌾",
   },
   {
-    title: "Construction (建設)",
+    title: "Move in out cleaning",
+    description:
+      "You've packed up and are ready to move into your new home, but the place you're leaving behind still needs a thorough cleaning. Moving out can be stressful, and cleaning may be the last thing on your mind.",
     image: "/images/Sectors/sector-04.png",
-    icon: "🏗️",
   },
   {
-    title: "Accommodation (宿泊業)",
+    title: "Post construction cleaning",
+    description:
+      "In the bustling world of construction, the final stages of a project often steal the spotlight, but there's a crucial detail that shouldn't be overlooked - post-construction cleaning.",
     image: "/images/Sectors/sector-05.png",
-    icon: "🏨",
+  },
+  {
+    title: "Recurring cleaning",
+    description:
+      "If you need to schedule cleaning services weekly, monthly, or on some other regular schedule, give us a call. We can provide scheduled cleaning services as often as you need, with special discounts for recurring visits.",
+    image: "/images/Sectors/sector-01.png",
   },
 ];
 
-export default function Services() {
+const Services: React.FC = () => {
   return (
-    <section className="w-full py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium text-[#1a1a1a]/80 uppercase tracking-wider">
-            Sectors
-          </span>
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+            SERVICES
+          </p>
+          <h2 className="text-4xl font-bold">Services We Provide</h2>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-[#1B4B40] mb-16">
-          Industries We Serve:
-          <br />
-          Your Path to Success in Japan
-        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <SpotlightCard key={service.title} service={service} />
+            <div
+              key={service.title}
+              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="relative h-64">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+                <button className="bg-yellow-400 text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-yellow-500 transition-colors duration-200 flex items-center gap-2">
+                  Learn more
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
-function SpotlightCard({ service }: { service: (typeof services)[0] }) {
-  const divRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [opacity, setOpacity] = useState(0);
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!divRef.current) return;
-
-    const div = divRef.current;
-    const rect = div.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = (y - centerY) / 15;
-    const rotateY = (centerX - x) / 15;
-
-    setPosition({ x, y });
-    setRotation({ x: rotateX, y: rotateY });
-  };
-
-  const handleMouseLeave = () => {
-    setOpacity(0);
-    setRotation({ x: 0, y: 0 });
-  };
-
-  return (
-    <div
-      ref={divRef}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setOpacity(1)}
-      onMouseLeave={handleMouseLeave}
-      className="group relative bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 perspective-1000"
-      style={{
-        transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-        transition: "transform 0.1s ease-out",
-      }}
-    >
-      {/* Gradient overlay */}
-      <div
-        className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(203,255,77,.1), transparent 40%)`,
-          opacity,
-        }}
-      />
-
-      <div className="aspect-[3/4] relative">
-        <Image
-          src={service.image}
-          alt={service.title}
-          fill
-          className="object-cover"
-        />
-        <div className="absolute top-4 left-4 w-10 h-10 bg-[#CBFF4D] rounded-full flex items-center justify-center text-xl">
-          {service.icon}
-        </div>
-      </div>
-      <div className="p-6 flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-[#1a1a1a]">
-          {service.title}
-        </h3>
-        <ArrowUpRight
-          className="text-[#1a1a1a] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          size={20}
-        />
-      </div>
-    </div>
-  );
-}
+export default Services;

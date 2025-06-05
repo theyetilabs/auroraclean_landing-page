@@ -6,6 +6,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export interface GlowingCard {
   icon?: React.ReactNode;
@@ -49,7 +50,7 @@ export default function GlowingCardsGrid({
               idx === 1 && "row-span-2"
             )}
           >
-            <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <CardHeader className="flex flex-col items-start gap-4 pb-2">
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-neutral-800">
                 {card.icon ? (
                   card.icon
@@ -64,6 +65,15 @@ export default function GlowingCardsGrid({
               </CardTitle>
             </CardHeader>
             <CardDescription className="px-6 pb-4 text-gray-600 dark:text-gray-300">
+              {idx === 1 && (
+                <Image
+                  src="/images/cleaning-span.webp"
+                  alt="logo"
+                  width={150}
+                  height={150}
+                  className="w-full h-full object-cover rounded-lg overflow-hidden m-2"
+                />
+              )}
               {card.description}
             </CardDescription>
           </Card>

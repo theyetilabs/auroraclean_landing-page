@@ -5,37 +5,46 @@ import Image from "next/image";
 interface Service {
   title: string;
   description: string;
-  price: string;
-  rating: string;
   image: string;
+  actionText: string;
 }
 
 const services: Service[] = [
   {
-    title: "Home Deep Cleaning",
+    title: "About Us",
     description:
-      "A thorough top-to-bottom cleaning to remove dust, dirt, and grime from every corner.",
-    price: "$30/hr",
-    rating: "4.9/5 (500+ reviews)",
-    image: "/images/deep-cleaning.jpg",
+      "Discover our story, values, and unwavering commitment to providing exceptional cleaning services since our inception.",
+    image: "/images/about-us.jpg",
+    actionText: "Learn More",
   },
   {
-    title: "Move-in/Move-Out Cleaning",
+    title: "Services",
     description:
-      "Perfect for tenants or homeowners—ensuring a fresh start in your new space.",
-    price: "$35/hr",
-    rating: "4.8/5 (500+ reviews)",
-    image: "/images/move-cleaning.jpg",
+      "Explore our comprehensive range of tailored cleaning solutions designed to meet your specific needs and preferences.",
+    image: "/images/consultation.jpg",
+    actionText: "View All",
   },
   {
-    title: "Window & Glass Cleaning",
+    title: "Products",
     description:
-      "Streak-free windows and glass cleaning for a crystal-clear shine.",
-    price: "$25/hr",
-    rating: "4.7/5 (500+ reviews)",
-    image: "/images/window-cleaning.jpg",
+      "Browse our selection of premium, eco-friendly cleaning products and professional-grade equipment.",
+    image: "/images/ai.jpg",
+    actionText: "Shop Now",
   },
-  // Add more services as needed
+  {
+    title: "Testimonials",
+    description:
+      "Read authentic reviews and success stories from our satisfied clients who trust us with their cleaning needs.",
+    image: "/images/audit.jpg",
+    actionText: "Read Stories",
+  },
+  {
+    title: "Blog",
+    description:
+      "Stay informed with expert cleaning tips, industry insights, and the latest trends in professional cleaning.",
+    image: "/images/blog-1.png",
+    actionText: "Read Articles",
+  },
 ];
 
 const CleaningServices: React.FC = () => {
@@ -53,39 +62,48 @@ const CleaningServices: React.FC = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service) => (
-            <PinContainer key={service.title} title={service.title}>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden w-80 h-96 flex flex-col">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={320}
-                  height={320}
-                  className="h-40 w-full object-cover"
-                />
-                <div className="flex-1 flex flex-col justify-between p-4">
+            <PinContainer
+              key={service.title}
+              title={service.title}
+              containerClassName="mb-20"
+            >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden w-80 h-auto flex flex-col group hover:shadow-2xl transition-all duration-300 ">
+                <div className="relative h-40 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={320}
+                    height={320}
+                    className="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300" />
+                </div>
+                <div className="flex-1 flex flex-col justify-between p-6">
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </div>
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className="text-xl font-bold text-emerald-600">
-                      {service.price}
-                    </span>
-                    <span className="text-sm text-orange-500 flex items-center gap-1">
-                      <svg
-                        className="w-4 h-4 inline"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" />
-                      </svg>
-                      {service.rating}
-                    </span>
-                  </div>
+                  <button className="mt-6 px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transform hover:-translate-y-0.5 transition-all duration-200 text-sm font-medium flex items-center justify-center gap-2">
+                    {service.actionText}
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </PinContainer>

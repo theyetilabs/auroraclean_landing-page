@@ -4,7 +4,7 @@ import Mission from "@/components/Mission";
 import Testimonials from "@/components/Testimonials";
 import Insights from "@/components/Insights";
 import GlowingCardsGrid from "@/components/ui/glowing-cards-grid";
-import { Lock, Sparkles, Cog, Cuboid } from "lucide-react";
+import { Sparkles, Cog, Cuboid } from "lucide-react";
 import CleaningServices from "@/components/CleaningServices";
 import InfiniteTestimonials from "@/components/InfiniteTestimonials";
 import QuickAndEasy from "@/components/QuickAndEasy";
@@ -21,32 +21,33 @@ export default function Home() {
         <GlowingCardsGrid
           cards={[
             {
+              icon: <Sparkles className="text-2xl text-blue-500" />,
+              title: "Certified Professionals",
+              description:
+                "Our fully trained, insured team delivers top-tier results.",
+            },
+            {
+              icon: <Cog className="text-2xl text-green-500" />,
+              title: "Customized Plans",
+              description:
+                "Flexible cleaning schedules to fit your business needs.",
+            },
+            {
               icon: <Cuboid className="text-2xl text-purple-500" />,
-              title: "Do things the right way",
-              description: "Running out of copy so I'll write anything.",
+              title: "Comprehensive Services",
+              description: "From daily maintenance to COVID-19 sanitization.",
             },
             {
-              icon: <Lock className="text-2xl text-gray-400" />,
-              title: "",
-              description: "",
-              locked: true,
-            },
-            {
-              icon: <Sparkles className="text-2xl text-indigo-400" />,
-              title: "This card is also built by Cursor",
+              icon: <Sparkles className="text-2xl text-yellow-500" />,
+              title: "Exclusive Perks",
               description:
-                "I'm not even kidding. Ask my mom if you don't believe me.",
+                "Discounted hygiene products for our valued clients.",
             },
             {
-              icon: <Cog className="text-2xl text-gray-500" />,
-              title: "The best AI code editor ever.",
+              icon: <Cuboid className="text-2xl text-indigo-500" />,
+              title: "Trusted Experience",
               description:
-                "Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me.",
-            },
-            {
-              icon: <Cuboid className="text-2xl text-pink-400" />,
-              title: "You should buy Aceternity UI Pro",
-              description: "It's the best money you'll ever spend",
+                "Serving 220+ gyms, 77 offices, 17 hotels, and more.",
             },
           ]}
         />

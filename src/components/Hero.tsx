@@ -4,15 +4,15 @@ import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import StatsCounter from "./StatsCounter";
 
-const texts = ["— हाम्रो साथले सहज।", "— Konnichiwa. こんにちは"];
+const texts = ["— Professional & Reliable", "— Eco-friendly Solutions"];
 
 const stats = [
-  { number: "4000+", label: "Students Empowered", duration: 2000 },
-  { number: "99.99%", label: "VISA Success Rate", duration: 2500 },
-  { number: "99.99%", label: "Job Placement", duration: 2500 },
-  { number: "300+", label: "Companies/Partners", duration: 2000 },
-  { number: "5+", label: "Years of Expertise", duration: 1500 },
-  { number: "4+", label: "Branches in Nepal", duration: 1500 },
+  { number: "220+", label: "Gyms & Health Clubs", duration: 2000 },
+  { number: "77+", label: "Offices", duration: 2000 },
+  { number: "17+", label: "Hotels", duration: 2000 },
+  { number: "33+", label: "Restaurants", duration: 2000 },
+  { number: "9+", label: "Warehouses", duration: 2000 },
+  { number: "3+", label: "Aged Care Homes", duration: 2000 },
 ];
 
 export default function Hero() {
@@ -54,9 +54,9 @@ export default function Hero() {
         <div className="container relative mx-auto px-4 py-16  md:py-24 font-inter">
           <div className="flex flex-col gap-6 max-w-3xl mt-20  ">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#00378b]">
-              Your SSW Journey to
+              Sparkle with
               <br />
-              Japan
+              Aurora Cleaning Service
               <br />
               <div className="flip-container  overflow-hidden mt-4">
                 <span
@@ -69,14 +69,15 @@ export default function Hero() {
               </div>
             </h1>
             <p className="text-lg text-[#00378b]">
-              Work in Japan: Learn Japanese in Nepali way
+              Eco-friendly practices ensure health, safety, and environmental
+              benefits.
             </p>
 
             {/* Student Count Section */}
             <div className="flex items-center gap-4 text-white">
               <StudentAvatars />
               <span className="font-medium text-[#00378b]">
-                4000+ Students Enrolled
+                300+ Satisfied Business Clients
               </span>
             </div>
 

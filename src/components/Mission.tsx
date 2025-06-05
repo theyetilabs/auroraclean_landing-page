@@ -17,12 +17,12 @@ export default function Mission() {
               <SparklesText text="Our Mission" />
             </h2>
             <p className="text-base md:text-lg leading-relaxed mb-10 tracking-wide">
-              Welcome to Customer Group, your gateway to success in Japan
-              through the Specified Skilled Worker (SSW) Program. We specialize
-              in empowering individuals to thrive in Japan&apos;s dynamic
-              workforce, providing comprehensive support for language
-              proficiency, visa processing, and job placement. Our goal is to be
-              your trusted partner in building a successful career in Japan.
+              Welcome to Aurora Cleaning Service, your trusted partner for
+              creating spotless, healthy, and inviting business environments
+              across Sydney. As part of the Asta Business Group, we bring
+              unmatched expertise and a passion for cleanliness to every
+              project. Whether you run a gym, office, or restaurant, our
+              tailored cleaning solutions ensure your space shines{" "}
             </p>
             <Link href="/about">
               <Button className="bg-white z-10 relative cursor-pointer text-[#2563EB] px-8 py-6 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300">
