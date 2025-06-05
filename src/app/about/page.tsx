@@ -5,34 +5,47 @@ import { Button } from "@/components/ui/button";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { MessageCircle } from "lucide-react";
 import { EvervaultCard } from "@/components/ui/evervault-card";
+
 const values = [
   {
-    title: "High Job Rate",
+    title: "Quality Assurance",
     description:
-      "Graduates hired fast! We equip you with the skills for today's job market.",
+      "Fully trained, certified, and insured cleaners delivering consistent, high-quality results.",
   },
   {
-    title: "Expert Qualified Teachers",
+    title: "Eco-Friendly Approach",
     description:
-      "Young, energetic, and top-notch Japanese language teachers ready to guide you!",
+      "Using the latest techniques and environmentally friendly cleaning products.",
   },
   {
-    title: "Dynamic Learning Environment",
+    title: "Comprehensive Service",
     description:
-      "Get ready for an innovative and energetic learning experience!",
+      "Catering to diverse sectors from gyms to aged care facilities with specialized cleaning solutions.",
   },
   {
-    title: "Transparent Policies",
-    description: "Fair and clear policies – no hidden costs, ever!",
+    title: "Client Benefits",
+    description:
+      "Exclusive discounted rates on premium hygiene products for our valued clients.",
   },
   {
-    title: "Integrity and Reliability",
-    description: "Trustworthy and reliable, we're focused on your success.",
+    title: "Reliability",
+    description:
+      "Consistent, timely service you can count on for your business needs.",
   },
   {
-    title: "Affordability",
-    description: "Quality education that won't break the bank!",
+    title: "Health & Safety",
+    description:
+      "Promoting a healthy, safe environment for your team and clients.",
   },
+];
+
+const industries = [
+  { name: "Gyms and Health Clubs", count: "220+" },
+  { name: "Offices", count: "77" },
+  { name: "Hotels", count: "17" },
+  { name: "Restaurants", count: "33" },
+  { name: "Warehouses", count: "9" },
+  { name: "Aged Care and Nursing Homes", count: "3" },
 ];
 
 export default function AboutPage() {
@@ -47,9 +60,9 @@ export default function AboutPage() {
               About Us
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Welcome to Customer Group, your dedicated partner in realizing
-              your aspirations of living and working in Japan through the
-              Specified Skilled Worker (SSW) Program.
+              Welcome to Aurora Cleaning Service, a proud member of the Asta
+              Business Group, dedicated to transforming Sydney&apos;s commercial
+              spaces into pristine environments.
             </p>
           </div>
         </section>
@@ -59,35 +72,35 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text">
-              Our Story: Bridging Nepal and Japan
+              Our Mission: Excellence in Every Clean
             </h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                Established in 2021 with our first branch in Kathmandu, Customer
-                Group was founded on a clear mission: to connect the immense
-                talent of Nepal with the diverse opportunities available in
-                Japan&apos;s thriving industries.
+                At Aurora Cleaning Service, we aim to exceed expectations by
+                providing exceptional cleaning services that promote health,
+                safety, and productivity in your workspace.
               </p>
               <p>
-                What began as a single location has grown into a network
-                spanning across Nepal, with branches in Chitwan (2023) and
-                Pokhara (2024), and an ambitious expansion planned for Butwal in
-                2025.
+                We believe that a clean space isn&apos;t just about
+                appearances—it&apos;s about creating a welcoming atmosphere that
+                enhances your team&apos;s productivity and impresses your
+                clients.
               </p>
               <p>
-                We&apos;ve witnessed firsthand the transformative impact of the
-                SSW program, and we are driven by the success stories of
-                individuals now building fulfilling lives in Japan.
+                Our team of professionals is committed to delivering consistent,
+                high-quality results using the latest techniques and
+                eco-friendly products, ensuring your space always looks its
+                best.
               </p>
             </div>
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-[#00378b]/10 to-[#00378b]/30">
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
-                src="/images/Journey/03/history-05.png"
-                alt="Customer Group Story"
+                src="/images/cleaning-service.jpg"
+                alt="Professional Cleaning Service"
                 fill
-                className="object-cover "
+                className="object-cover"
               />
             </div>
           </div>
@@ -99,7 +112,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
             Our Values:{" "}
-            <span className="text-[#00378b]">Guiding Principles</span>
+            <span className="text-[#00378b]">Service Excellence</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
             {values.map((value) => (
@@ -126,38 +139,21 @@ export default function AboutPage() {
       <section className="relative py-16 px-4 md:px-6 lg:px-8 bg-[#363672]">
         <BackgroundBeams className="absolute inset-0 z-0" />
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="flex items-center justify-center">
-              <div className="relative h-[600px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl ">
-                <Image
-                  src="/images/CEO.png"
-                  alt="Subash Bohora, CEO"
-                  fill
-                  className="object-cover object-top aspect-[9/16] "
-                />
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Industries We Serve
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry) => (
+              <div
+                key={industry.name}
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
+              >
+                <h3 className="text-4xl font-bold text-white mb-2">
+                  {industry.count}
+                </h3>
+                <p className="text-gray-200">{industry.name}</p>
               </div>
-            </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white">
-                A Message from Our CEO
-              </h2>
-              <div className="space-y-4 text-gray-200">
-                <p>
-                  At Customer Group Nepal, our commitment to unwavering quality
-                  and dedication remains steadfast, whether we are guiding one
-                  student or a group of ten. Rooted in the belief of &quot;काम
-                  भन्दा कर्म ठुलो&quot; (Deeds Speak Louder Than Words), our
-                  teaching philosophy is direct; sometimes sharp, but always
-                  aimed at ensuring the success of our students.
-                </p>
-                <p>
-                  We value fairness – we do not confuse our students, and we
-                  only accept the rewards of the duties we have successfully
-                  completed, without any hidden agendas.
-                </p>
-                <p className="font-semibold">- SUBASH BOHORA, CEO</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -166,21 +162,20 @@ export default function AboutPage() {
       <section className="py-16 px-4 md:px-6 lg:px-8 text-center relative bg-linear-to-b from-[#363672] to-[#00378b] text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold text-white">
-            Ready to Begin Your Journey to
-            <span className="text-red-500 font-bold"> Japan?</span>
+            Ready to Transform Your Space?
           </h2>
-          <p className="text-md text-gray-200 ">
-            We invite you to take the first step towards your dream of living
-            and working in Japan. Contact us today for a Free Consultation and
-            let us help you make it happen!
+          <p className="text-md text-gray-200">
+            Let&apos;s discuss how we can elevate your business environment with
+            our professional cleaning expertise. Contact us today for a
+            customized cleaning solution.
           </p>
-          <Link href="https://forms.gle/zUzeXaLBSKGPeUiu7" target="_blank">
+          <Link href="/contact">
             <Button
               size="lg"
               className="bg-white hover:bg-[#002d70] text-[#00378b] px-8 py-6 rounded-full text-lg group"
             >
               <MessageCircle className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-1" />
-              Free Consultation
+              Get a Free Quote
             </Button>
           </Link>
         </div>

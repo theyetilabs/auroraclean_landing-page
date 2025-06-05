@@ -23,33 +23,11 @@ interface BranchContent {
 
 const branches: BranchContent[] = [
   {
-    title: "Kathmandu Branch",
-    description: "Sushi Bomber, Gongabu chowk, Kathmandu,Nepal",
-    email: "kathmandu@customergroup.com.np",
-    phone: "(KTM) 01-5911783 | 9820151440",
-    content: <ContactForm branchTitle="Kathmandu Branch" />,
-  },
-  {
-    title: "Pokhara Branch",
-    description: "Sushi Bomber Pokhara, Sabhagriha chowk, Pokhara,Nepal",
-    email: "pokhara@customergroup.com.np",
-    phone: "(PKR) 061-589103 | 9820151442",
-    content: <ContactForm branchTitle="Pokhara Branch" />,
-  },
-  {
-    title: "Chitwan Branch",
-    description: "Sushi Bomber Chitwan, Chitwan,Nepal",
-    email: "chitwan@customergroup.com.np",
-    phone: "(CTW) 056-493959 | 9820151441",
-    content: <ContactForm branchTitle="Chitwan Branch" />,
-  },
-  {
-    title: "Butwal Branch",
-    description:
-      "CG, Customer Group, Raj Shree Complex (4th floor), Traffic Chowk, Butwal",
-    email: "butwal@customergroup.com.np",
-    phone: "(BTW) +977 9704591439",
-    content: <ContactForm branchTitle="Butwal Branch" />,
+    title: "Sydney Office",
+    description: "Serving the entire Sydney metropolitan area",
+    email: "info@astabusinessgroup.com.au",
+    phone: "0406 158 054 | 0468 402 663 | 0420 699 356",
+    content: <ContactForm branchTitle="Sydney Office" />,
   },
 ] as const;
 
@@ -64,9 +42,8 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              Get in touch with our team at any of our branches across Nepal.
-              We&apos;re here to help you achieve your dreams of working in
-              Japan.
+              We&apos;re here to help your business shine. Contact us for a free
+              quote or to discuss your cleaning needs.
             </p>
           </div>
         </section>
@@ -86,37 +63,40 @@ export default function ContactPage() {
         <BackgroundBeams className="absolute inset-0 z-0" />
         <div className="relative z-10 max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
-            Our Locations
+            Our Service Area
           </h2>
-          <div className="grid grid-cols-1  md:grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
             <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl col-span-2">
               <Map />
             </div>
-            <div className="grid grid-cols-1  md:grid-cols-4 gap-8">
-              <div className="bg-white/10 p-4 rounded-lg space-y-2 flex flex-col justify-center ">
-                <h3 className="text-white font-semibold">Kathmandu Branch</h3>
-                <p className="text-white/80 text-sm">
-                  Sushi Bomber, Gongabu chowk, Kathmandu, Nepal
+            <div className="grid grid-cols-1 gap-8">
+              <div className="bg-white/10 p-6 rounded-lg space-y-4">
+                <h3 className="text-white font-semibold text-xl">
+                  Sydney Metropolitan Area
+                </h3>
+                <p className="text-white/80">
+                  We proudly serve the entire Sydney metropolitan area, from the
+                  CBD to the suburbs.
                 </p>
-              </div>
-              <div className="bg-white/10 p-4 rounded-lg space-y-2 flex flex-col justify-center">
-                <h3 className="text-white font-semibold">Pokhara Branch</h3>
-                <p className="text-white/80 text-sm">
-                  Sushi Bomber Pokhara, Sabhagriha chowk, Pokhara, Nepal
-                </p>
-              </div>
-              <div className="bg-white/10 p-4 rounded-lg space-y-2 flex flex-col justify-center">
-                <h3 className="text-white font-semibold">Chitwan Branch</h3>
-                <p className="text-white/80 text-sm">
-                  Sushi Bomber Chitwan, Tisha Complex, Sahid Chowk, Chitwan
-                </p>
-              </div>
-              <div className="bg-white/10 p-4 rounded-lg space-y-2 flex flex-col justify-center">
-                <h3 className="text-white font-semibold">Butwal Branch</h3>
-                <p className="text-white/80 text-sm">
-                  CG, Customer Group, Raj Shree Complex (4th floor)
-                </p>
-                <p className="text-white/80 text-sm">Traffic Chowk, Butwal</p>
+                <div className="space-y-2">
+                  <p className="text-white/80">
+                    <span className="font-semibold">Phone:</span>{" "}
+                    {branches[0].phone}
+                  </p>
+                  <p className="text-white/80">
+                    <span className="font-semibold">Email:</span>{" "}
+                    {branches[0].email}
+                  </p>
+                  <p className="text-white/80">
+                    <span className="font-semibold">Website:</span>{" "}
+                    <a
+                      href="https://astabusinessgroup.com.au"
+                      className="text-blue-300 hover:text-blue-400 transition-colors"
+                    >
+                      Asta Business Group
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

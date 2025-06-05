@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MessageCircle, Menu, X, ChevronDown } from "lucide-react";
-
+import { services } from "@/lib/constants";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,20 +19,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const coursesSubmenu = [
-    { label: "Basic Course", href: "/course#basic-course" },
-    { label: "Advanced Course", href: "/course#advanced-course" },
-  ];
-
-  const servicesSubmenu = [
-    {
-      label: "Japanese Language Training",
-      href: "/service/japanese-language-training",
-    },
-    { label: "Visa Processing", href: "/service/visa-processing" },
-    { label: "Job Placement", href: "/service/job-placement" },
-  ];
 
   return (
     <nav
@@ -73,42 +59,6 @@ export default function Navbar() {
               <span className="text-black font-bold">Home</span>
             </NavLink>
 
-            {/* Courses Submenu */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setActiveSubmenu("courses")}
-              onMouseLeave={() => setActiveSubmenu(null)}
-            >
-              <Link
-                href="/course"
-                className="flex items-center gap-1 text-black font-bold hover:opacity-80"
-              >
-                Courses{" "}
-                <ChevronDown
-                  size={16}
-                  className="transition-transform group-hover:rotate-180"
-                />
-              </Link>
-              <div
-                className={cn(
-                  "absolute top-full left-0 w-48 bg-white rounded-lg shadow-lg py-2 transition-all duration-300",
-                  activeSubmenu === "courses"
-                    ? "opacity-100 visible"
-                    : "opacity-0 invisible"
-                )}
-              >
-                {coursesSubmenu.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
             {/* Services Submenu */}
             <div
               className="relative group"
@@ -130,22 +80,20 @@ export default function Navbar() {
                     : "opacity-0 invisible"
                 )}
               >
-                {servicesSubmenu.map((item) => (
+                {services.map((item) => (
                   <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                    key={item.slug}
+                    href={`/service/${item.slug}`}
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-sm transition-colors"
                   >
-                    {item.label}
+                    {item.service_name}
                   </Link>
                 ))}
               </div>
             </div>
-            <NavLink
-              href="/why-choose-us"
-              setIsMobileMenuOpen={setIsMobileMenuOpen}
-            >
-              <span className="text-black font-bold">Why Us</span>
+
+            <NavLink href="/products" setIsMobileMenuOpen={setIsMobileMenuOpen}>
+              <span className="text-black font-bold">Products</span>
             </NavLink>
             <NavLink
               href="/blogs"
@@ -199,46 +147,6 @@ export default function Navbar() {
                 <span className="text-black font-bold text-xl">Home</span>
               </NavLink>
 
-              {/* Mobile Courses Submenu */}
-              <div className="flex flex-col gap-2">
-                <button
-                  className="text-black font-bold text-xl flex items-center gap-2"
-                  onClick={() =>
-                    setActiveSubmenu(
-                      activeSubmenu === "courses" ? null : "courses"
-                    )
-                  }
-                >
-                  Courses{" "}
-                  <ChevronDown
-                    size={16}
-                    className={cn(
-                      "transition-transform",
-                      activeSubmenu === "courses" ? "rotate-180" : ""
-                    )}
-                  />
-                </button>
-                <div
-                  className={cn(
-                    "pl-4 flex flex-col gap-2 transition-all duration-300",
-                    activeSubmenu === "courses"
-                      ? "opacity-100 visible"
-                      : "opacity-0 invisible h-0"
-                  )}
-                >
-                  {coursesSubmenu.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="text-gray-700 hover:text-black transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
               {/* Mobile Services Submenu */}
               <div className="flex flex-col gap-2">
                 <button
@@ -266,23 +174,23 @@ export default function Navbar() {
                       : "opacity-0 invisible h-0"
                   )}
                 >
-                  {servicesSubmenu.map((item) => (
+                  {services.map((item) => (
                     <Link
-                      key={item.href}
-                      href={item.href}
+                      key={item.slug}
+                      href={`/service/${item.slug}`}
                       className="text-gray-700 hover:text-black transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {item.label}
+                      {item.service_name}
                     </Link>
                   ))}
                 </div>
               </div>
               <NavLink
-                href="/why-choose-us"
+                href="/products"
                 setIsMobileMenuOpen={setIsMobileMenuOpen}
               >
-                <span className="text-black font-bold text-xl">Why Us</span>
+                <span className="text-black font-bold text-xl">Products</span>
               </NavLink>
               <NavLink href="/blogs" setIsMobileMenuOpen={setIsMobileMenuOpen}>
                 <span className="text-black font-bold text-xl">Blog</span>
