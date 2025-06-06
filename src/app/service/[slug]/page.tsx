@@ -4,6 +4,7 @@ import { services } from "@/lib/constants";
 import ServiceHero from "@/components/service/ServiceHero";
 import TaskList from "@/components/service/TaskList";
 import ServiceSidebar from "@/components/service/ServiceSidebar";
+import { use } from "react";
 
 interface ServiceType {
   slug: string;
@@ -34,9 +35,14 @@ interface ServiceType {
   };
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
+export default function ServicePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = use(params);
   const service = services.find(
-    (s: ServiceType) => s.slug === params.slug
+    (s: ServiceType) => s.slug === slug
   ) as ServiceType;
 
   if (!service) {
