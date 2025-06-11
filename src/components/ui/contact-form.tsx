@@ -49,7 +49,7 @@ export function ContactForm({ branchTitle }: ContactFormProps) {
 
   return (
     <div className="w-full h-full p-6 flex flex-col gap-4">
-      <h3 className="text-xl font-semibold text-[#00378b]">
+      <h3 className="text-xl font-semibold text-[#018D43]">
         Contact {branchTitle}
       </h3>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -95,7 +95,7 @@ export function ContactForm({ branchTitle }: ContactFormProps) {
 
         <Button
           type="submit"
-          className="w-full bg-[#00378b] hover:bg-[#002d70] text-white mt-auto"
+          className="w-full bg-[#018D43] hover:bg-[#002d70] text-white mt-auto"
           disabled={isSubmitting}
         >
           <Send className="mr-2 h-4 w-4" />

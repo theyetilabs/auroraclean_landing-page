@@ -20,7 +20,7 @@ export default function HowToOrder() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-yellow-400 text-black px-8 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-[#FFB347] text-black px-8 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-200"
             >
               Contact Us
               <svg

@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#00378b]/10 to-transparent"
+        className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/10 to-transparent"
       >
         <section className="relative pt-30 pb-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center space-y-4">
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text"
             >
               Privacy Policy
             </motion.h1>
@@ -125,7 +125,7 @@ export default function PrivacyPolicyPage() {
                 value={`item-${index}`}
                 className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold text-[#00378b] hover:text-[#363672]">
+                <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold text-[#018D43] hover:text-[#363672]">
                   {policy.title}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-4 text-gray-600">

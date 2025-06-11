@@ -100,7 +100,7 @@ const faqData = [
 export default function FAQPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white ">
-      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#00378b]/40 to-transparent py-32">
+      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/40 to-transparent py-32">
         <div className="text-center mb-3">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions

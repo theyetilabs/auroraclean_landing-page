@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Commercial Cleaning Services",
     role: "Professional Commercial Solutions",
-    image: "/images/Sectors/sector-01.png",
+    image: "/images/tabs-section/01.png",
     quote: "Comprehensive Commercial Cleaning Solutions",
     content:
       "• Routine Maintenance\n• Deep Cleaning\n• Disinfection Services\n• Specialized Cleaning\n• Emergency Cleaning\n• Eco-Friendly Options\n• Additional Services",
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Office Cleaning Sydney",
     role: "Professional Office Solutions",
-    image: "/images/Sectors/sector-02.png",
+    image: "/images/tabs-section/02.png",
     quote: "Tailored Office Cleaning Services",
     content:
       "• Daily Cleaning\n• Weekly Cleaning\n• Monthly Deep Cleaning\n• Specialized Services\n• End-of-Lease\n• Post-Construction\n• COVID-19 Disinfection\n• Custom Plans",
@@ -25,7 +25,7 @@ const testimonials = [
   {
     name: "Strata Cleaning Sydney",
     role: "Comprehensive Strata Solutions",
-    image: "/images/Sectors/sector-03.png",
+    image: "/images/tabs-section/03.png",
     quote: "Complete Strata Property Maintenance",
     content:
       "• Common Areas\n• Exterior Maintenance\n• Outdoor Areas\n• Waste Management\n• Deep Cleaning\n• Pool & Gym Cleaning\n• Community Room Cleaning\n• Minor Maintenance",
@@ -34,7 +34,7 @@ const testimonials = [
   {
     name: "Medical Cleaning Sydney",
     role: "Healthcare Facility Solutions",
-    image: "/images/Sectors/sector-04.png",
+    image: "/images/tabs-section/04.png",
     quote: "Specialized Medical Facility Cleaning",
     content:
       "• Routine Cleaning\n• Terminal Cleaning\n• High-Touch Surface Disinfection\n• Restroom Cleaning\n• Kitchen Area Cleaning\n• Operating Rooms\n• Labs & Pharmacies\n• Medical Waste Management",
@@ -43,7 +43,7 @@ const testimonials = [
   {
     name: "Gym Cleaning Sydney",
     role: "Fitness Facility Solutions",
-    image: "/images/Sectors/sector-05.png",
+    image: "/images/tabs-section/05.png",
     quote: "Comprehensive Gym & Fitness Center Cleaning",
     content:
       "• Equipment Cleaning\n• Floors and Carpets\n• Restrooms and Showers\n• Locker Rooms\n• Windows and Mirrors\n• Air Quality Improvement\n• Sauna Cleaning\n• Deep Cleaning Services",
@@ -63,7 +63,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="w-full bg-[#00378b] text-white py-20">
+    <section className="w-full bg-[#018D43] text-white py-20">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold mb-16">Our Cleaning Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -79,13 +79,15 @@ export default function Testimonials() {
                 }`}
                 onClick={() => setActiveTestimonial(index)}
               >
-                <div className="relative h-14 w-14 rounded-lg overflow-hidden bg-white/5">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    fill
-                    className="object-cover"
-                  />
+                <div className=" p-4 bg-white rounded-lg">
+                  <div className="relative h-14 w-14 rounded-lg overflow-hidden bg-white">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">{service.name}</h3>

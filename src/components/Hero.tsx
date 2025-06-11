@@ -44,7 +44,7 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="/images/hero-placeholder.png" // Add a poster image for better initial load
           >
-            <source src="/video/hero.mp4" type="video/mp4" />
+            <source src="/video/hero-v3.mp4" type="video/mp4" />
           </video>
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white  w-1/2 " />
@@ -53,7 +53,7 @@ export default function Hero() {
         {/* Content */}
         <div className="container relative mx-auto px-4 py-16  md:py-24 font-inter">
           <div className="flex flex-col gap-6 max-w-3xl mt-20  ">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#00378b]">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#018D43]">
               Sparkle with
               <br />
               Aurora Cleaning Service
@@ -68,7 +68,7 @@ export default function Hero() {
                 </span>
               </div>
             </h1>
-            <p className="text-lg text-[#00378b]">
+            <p className="text-lg text-[#018D43]">
               Eco-friendly practices ensure health, safety, and environmental
               benefits.
             </p>
@@ -76,7 +76,7 @@ export default function Hero() {
             {/* Student Count Section */}
             <div className="flex items-center gap-4 text-white">
               <StudentAvatars />
-              <span className="font-medium text-[#00378b]">
+              <span className="font-medium text-[#018D43]">
                 300+ Satisfied Business Clients
               </span>
             </div>
@@ -86,7 +86,7 @@ export default function Hero() {
               <a
                 href="https://forms.gle/zUzeXaLBSKGPeUiu7"
                 target="_blank"
-                className="group flex items-center gap-2 bg-[#00378b] hover:bg-[#0099db] text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group flex items-center gap-2 bg-[#018D43] hover:bg-[#0099db] text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <MessageCircle className="w-6 h-6" />
                 <span>Free Consultation</span>
@@ -110,7 +110,7 @@ export default function Hero() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#00378b] py-4 relative">
+      <section className="bg-[#018D43] py-4 relative">
         {/* Horizontal Line */}
         <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2">
           <div className="border-t border-white/20 w-full"></div>

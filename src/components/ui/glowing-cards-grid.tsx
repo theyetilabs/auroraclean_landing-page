@@ -64,16 +64,17 @@ export default function GlowingCardsGrid({
                 {card.title}
               </CardTitle>
             </CardHeader>
-            <CardDescription className="px-6 pb-4 text-gray-600 dark:text-gray-300">
-              {idx === 1 && (
+            <CardDescription className="px-6 flex-1 pb-8 text-gray-600 dark:text-gray-300">
+              <div className="flex-shrink-0 h-full w-full mb-4">
                 <Image
-                  src="/images/cleaning-span.webp"
+                  src={`/images/Why-us/${card.title.replace(" ", "-")}.png`}
                   alt="logo"
-                  width={150}
-                  height={150}
-                  className="w-full h-full object-cover rounded-lg overflow-hidden m-2"
+                  width={9450}
+                  height={9450}
+                  className="w-full h-full  object-cover rounded-lg overflow-hidden m-2"
                 />
-              )}
+              </div>
+
               {card.description}
             </CardDescription>
           </Card>

@@ -47,7 +47,7 @@ export default function FloatingContact() {
           >
             <div className="p-4">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-bold text-[#00378b]">Contact Us</h3>
+                <h3 className="text-lg font-bold text-[#018D43]">Contact Us</h3>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-gray-100 rounded-full transition-colors"
@@ -69,14 +69,14 @@ export default function FloatingContact() {
                       className="p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="p-2 bg-[#00378b]/10 rounded-full group-hover:bg-[#00378b]/20 transition-colors">
-                          <Phone size={16} className="text-[#00378b]" />
+                        <div className="p-2 bg-[#018D43]/10 rounded-full group-hover:bg-[#018D43]/20 transition-colors">
+                          <Phone size={16} className="text-[#018D43]" />
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">
                             {branch.name}
                           </h4>
-                          <p className="text-sm text-gray-600 text-[#00378b] hover:text-[#363672] ">
+                          <p className="text-sm text-gray-600 text-[#018D43] hover:text-[#363672] ">
                             {branch.phone}
                           </p>
                         </div>
@@ -93,7 +93,7 @@ export default function FloatingContact() {
       <div className="relative">
         {/* Pulsing Ring Animation */}
         <motion.div
-          className="absolute inset-0 rounded-full bg-[#00378b]"
+          className="absolute inset-0 rounded-full bg-[#018D43]"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.5, 0, 0.5],
@@ -107,7 +107,7 @@ export default function FloatingContact() {
 
         {/* Rotating Ring Animation */}
         <motion.div
-          className="absolute inset-0 rounded-full border-2 border-[#00378b]"
+          className="absolute inset-0 rounded-full border-2 border-[#018D43]"
           animate={{
             rotate: 360,
             y: [0, -8, 0],
@@ -124,7 +124,7 @@ export default function FloatingContact() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="relative w-14 h-14 bg-[#00378b] rounded-full shadow-lg flex items-center justify-center text-white hover:bg-[#363672] transition-colors"
+          className="relative w-14 h-14 bg-[#018D43] rounded-full shadow-lg flex items-center justify-center text-white hover:bg-[#363672] transition-colors"
           animate={{
             y: [0, -8, 0],
           }}

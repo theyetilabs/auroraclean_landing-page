@@ -6,11 +6,12 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MessageCircle, Menu, X, ChevronDown } from "lucide-react";
 import { services } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
+  const router = useRouter();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -61,11 +62,12 @@ export default function Navbar() {
 
             {/* Services Submenu */}
             <div
-              className="relative group"
+              className="relative group cursor-pointer"
               onMouseEnter={() => setActiveSubmenu("services")}
               onMouseLeave={() => setActiveSubmenu(null)}
+              onClick={() => router.push("/services")}
             >
-              <button className="flex items-center gap-1 text-black font-bold hover:opacity-80">
+              <button className="flex items-center cursor-pointer gap-1 text-black font-bold hover:opacity-80">
                 Services{" "}
                 <ChevronDown
                   size={16}
@@ -117,8 +119,8 @@ export default function Navbar() {
             className={cn(
               "hidden md:flex px-6 py-4 rounded-full font-sm  transition-all items-center gap-2 font-bold",
               scrolled
-                ? "bg-[#00378b] text-white hover:bg-[#363672]"
-                : "bg-white text-[#00378b] hover:bg-gray-100"
+                ? "bg-[#018D43] text-white hover:bg-[#363672]"
+                : "bg-white text-[#018D43] hover:bg-gray-100"
             )}
           >
             <MessageCircle size={18} /> Free Consultation
@@ -148,14 +150,10 @@ export default function Navbar() {
               </NavLink>
 
               {/* Mobile Services Submenu */}
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 cursor-pointer">
                 <button
                   className="text-black font-bold text-xl flex items-center gap-2"
-                  onClick={() =>
-                    setActiveSubmenu(
-                      activeSubmenu === "services" ? null : "services"
-                    )
-                  }
+                  onClick={() => router.push("/services")}
                 >
                   Services{" "}
                   <ChevronDown
@@ -210,8 +208,8 @@ export default function Navbar() {
                 className={cn(
                   "px-6 py-4 rounded-full font-sm transition-all flex items-center gap-2 font-bold mt-4",
                   scrolled
-                    ? "bg-[#00378b] text-white hover:bg-[#363672]"
-                    : "bg-[#00378b] text-white hover:bg-[#363672]"
+                    ? "bg-[#018D43] text-white hover:bg-[#363672]"
+                    : "bg-[#018D43] text-white hover:bg-[#363672]"
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -227,7 +225,7 @@ export default function Navbar() {
         <a
           href="https://forms.gle/zUzeXaLBSKGPeUiu7"
           target="_blank"
-          className="group flex items-center gap-2 bg-gradient-to-r from-[#00378b] to-transparent hover:bg-[#0099db] text-white px-6 py-3  text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+          className="group flex items-center gap-2 bg-gradient-to-r from-[#018D43] to-transparent hover:bg-[#0099db] text-white px-6 py-3  text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
         >
           <MessageCircle className="w-5 h-5" />
           <span>Get Free Consultation</span>
