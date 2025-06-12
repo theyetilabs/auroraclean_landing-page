@@ -77,7 +77,7 @@ const Services: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   {service.description}
                 </p>
-                <button className="bg-yellow-400 text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-yellow-500 transition-colors duration-200 flex items-center gap-2">
+                <button className="bg-[#FFB347] text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-yellow-500 transition-colors duration-200 flex items-center gap-2">
                   Learn more
                   <svg
                     className="w-4 h-4"

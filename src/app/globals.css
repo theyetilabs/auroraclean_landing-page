@@ -260,7 +260,7 @@
   height: 100%;
   width: 100%;
   background: radial-gradient(circle at top right, #ffffff, transparent 50%),
-    radial-gradient(circle at bottom left, #cdddf8, transparent 50%);
+    radial-gradient(circle at bottom left, #9ec3c3, transparent 100%);
   pointer-events: none;
 }
 

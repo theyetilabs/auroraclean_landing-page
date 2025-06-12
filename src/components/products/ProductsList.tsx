@@ -56,11 +56,11 @@ export default function ProductsList() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-2xl font-bold text-yellow-500 mb-4">
+                <p className="text-2xl font-bold text-[#FFB347] mb-4">
                   ${product.price}
                 </p>
                 <p className="text-gray-600 mb-6">{product.features}</p>
-                <button className="w-full bg-yellow-400 text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-200 flex items-center justify-center gap-2">
+                <button className="w-full bg-[#FFB347] text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-200 flex items-center justify-center gap-2">
                   Add to Cart
                   <svg
                     className="w-5 h-5"

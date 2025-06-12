@@ -18,7 +18,7 @@ export default function Insights() {
       >
         <path
           d="M-200 400C100 400 300 600 700 600C1100 600 1300 400 1600 400V800H-200V400Z"
-          fill="#00378b"
+          fill="#018D43"
         />
       </svg>
 
@@ -60,7 +60,7 @@ export default function Insights() {
                   >
                     <path
                       d="M0 0H200V400H0C100 300 100 100 0 0Z"
-                      fill="#e0eaff"
+                      fill="#9ec3c3"
                       fillOpacity="1"
                     />
                   </svg>
@@ -97,7 +97,7 @@ export default function Insights() {
         <div className="text-center mt-12">
           <Link
             href="/blogs"
-            className="bg-[#e0eaff] text-[#1B4B40] px-8 py-3 rounded-full font-medium hover:bg-[#00378b]/90 hover:text-white transition-all duration-300"
+            className="bg-[#9ec3c3] text-[#1B4B40] px-8 py-3 rounded-full font-medium hover:bg-[#018D43]/90 hover:text-white transition-all duration-300"
             prefetch
           >
             More Insights

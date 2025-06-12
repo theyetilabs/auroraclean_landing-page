@@ -76,7 +76,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-[#232359] to-[#00378b] text-white py-16 relative">
+    <footer className="bg-gradient-to-t from-[#1244CE] to-[#018D43] text-white py-16 relative">
       <BackgroundBeams className="z-10" />
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 relative z-20">
         {/* Logo and Contact */}
@@ -178,7 +178,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               />
-              <Button className="bg-white text-[#00378b] hover:bg-white/90">
+              <Button className="bg-white text-[#018D43] hover:bg-white/90">
                 <Send size={16} />
               </Button>
             </div>

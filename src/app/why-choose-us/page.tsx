@@ -203,7 +203,7 @@ export default function WhyChooseUsPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#00378b]/10 to-transparent"
+        className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/10 to-transparent"
       >
         <section className="relative pt-30 pb-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center space-y-4">
@@ -211,7 +211,7 @@ export default function WhyChooseUsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text"
             >
               Why Choose Us?
             </motion.h1>
@@ -281,7 +281,7 @@ export default function WhyChooseUsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gradient-to-b from-[#363672] to-[#00378b]/80 p-2 md:p-12  rounded-3xl"
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gradient-to-b from-[#363672] to-[#018D43]/80 p-2 md:p-12  rounded-3xl"
                 >
                   <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
                     <Image
@@ -335,7 +335,7 @@ export default function WhyChooseUsPage() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="py-20 pb-9  bg-[#00378b] text-white"
+        className="py-20 pb-9  bg-[#018D43] text-white"
       >
         <div className="max-w-4xl mx-auto px-4 text-center relative ">
           <motion.h2
@@ -368,7 +368,7 @@ export default function WhyChooseUsPage() {
           >
             <Link
               href="/contact"
-              className="inline-block bg-white text-[#00378b] px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-white text-[#018D43] px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Start Your Journey
             </Link>

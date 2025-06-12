@@ -99,10 +99,10 @@ export default function CoursePage() {
   return (
     <main className="min-h-screen relative overflow-hidden w-full">
       {/* Hero Section */}
-      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#00378b]/40 to-transparent">
+      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/40 to-transparent">
         <section className="relative pt-30 pb-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text">
               Japanese Language Courses
             </h1>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
@@ -116,7 +116,7 @@ export default function CoursePage() {
       {/* Course Objectives */}
       <section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#00378b] mb-8 text-center">
+          <h2 className="text-3xl font-bold text-[#018D43] mb-8 text-center">
             Course Objectives
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -126,7 +126,7 @@ export default function CoursePage() {
               viewport={{ once: true }}
               className="bg-white p-6 rounded-xl shadow-lg"
             >
-              <GraduationCap className="w-8 h-8 text-[#00378b] mb-4" />
+              <GraduationCap className="w-8 h-8 text-[#018D43] mb-4" />
               <h3 className="text-xl font-semibold mb-4">
                 What You&apos;ll Learn
               </h3>
@@ -163,7 +163,7 @@ export default function CoursePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {courseFeatures.map((feature, index) => (
                   <div key={index} className="p-4 rounded-lg bg-blue-50">
-                    <div className="text-[#00378b] mb-2">{feature.icon}</div>
+                    <div className="text-[#018D43] mb-2">{feature.icon}</div>
                     <h4 className="font-semibold mb-2">{feature.title}</h4>
                     <p className="text-sm text-gray-600">
                       {feature.description}
@@ -178,7 +178,7 @@ export default function CoursePage() {
       <div id="basic-course" className=" mt-10"></div>
       <div id="advanced-course" className=" mt-10"></div>
       {/* Course Levels */}
-      <section className="relative py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-[#363672] to-[#00378b]">
+      <section className="relative py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-[#363672] to-[#018D43]">
         <BackgroundBeams className="absolute inset-0 z-0" />
         <div className="relative z-10 max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
@@ -231,7 +231,7 @@ export default function CoursePage() {
                   </div>
                 </div>
                 <Link href="/contact">
-                  <Button className="w-full mt-6 bg-white text-[#00378b] hover:bg-white/90 cursor-pointer">
+                  <Button className="w-full mt-6 bg-white text-[#018D43] hover:bg-white/90 cursor-pointer">
                     Enroll Now
                   </Button>
                 </Link>
@@ -244,7 +244,7 @@ export default function CoursePage() {
       {/* Additional Features */}
       <section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#00378b] mb-8">
+          <h2 className="text-3xl font-bold text-[#018D43] mb-8">
             Additional Course Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

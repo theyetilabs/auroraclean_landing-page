@@ -102,7 +102,7 @@ export const InfiniteForm = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-[#00378b]"
+                className="text-2xl font-bold text-[#018D43]"
               >
                 {item.title}
               </motion.h2>
@@ -125,7 +125,7 @@ export const InfiniteForm = ({
                     {item.email}
                   </a>
                 </div>
-                <button className="px-6 py-2 mt-4 border border-[#00378b] text-[#00378b] rounded-full hover:bg-[#00378b] hover:text-white transition-colors">
+                <button className="px-6 py-2 mt-4 border border-[#018D43] text-[#018D43] rounded-full hover:bg-[#018D43] hover:text-white transition-colors">
                   Get Direction
                 </button>
               </motion.div>

@@ -26,11 +26,11 @@ const Map = () => {
       <Polygon
         positions={sydneyMetroCoords}
         pathOptions={{
-          fillColor: "#00378b",
+          fillColor: "#018D43",
           fillOpacity: 0.3,
           weight: 2,
           opacity: 1,
-          color: "#00378b",
+          color: "#018D43",
         }}
       />
     </MapContainer>

@@ -53,7 +53,7 @@ export const EvervaultCard = ({
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative h-34 w-34  rounded-full flex items-center justify-center text-white font-bold text-xl md:text-4xl">
             <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="dark:text-white z-20 bg-gradient-to-br from-[#00378b] via-[#363672] to-red-500 bg-clip-text text-transparent animate-gradient-x font-bold text-center">
+            <span className="dark:text-white z-20 bg-gradient-to-br from-[#018D43] via-[#363672] to-red-500 bg-clip-text text-transparent animate-gradient-x font-bold text-center">
               {text}
             </span>
           </div>

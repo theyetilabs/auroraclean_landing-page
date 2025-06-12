@@ -51,12 +51,12 @@ const industries = [
 export default function AboutPage() {
   return (
     <main className="gradient min-h-screen relative overflow-hidden">
-      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#00378b]/40 to-transparent">
+      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/40 to-transparent">
         {" "}
         {/* Hero Section */}
         <section className="relative pt-30 pb-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto  ">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text">
               About Us
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -71,7 +71,7 @@ export default function AboutPage() {
       <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text">
               Our Mission: Excellence in Every Clean
             </h2>
             <div className="space-y-4 text-gray-700">
@@ -94,7 +94,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-[#00378b]/10 to-[#00378b]/30">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-[#018D43]/10 to-[#018D43]/30">
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src="/images/cleaning-service.jpg"
@@ -112,7 +112,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
             Our Values:{" "}
-            <span className="text-[#00378b]">Service Excellence</span>
+            <span className="text-[#018D43]">Service Excellence</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
             {values.map((value) => (
@@ -159,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8 text-center relative bg-linear-to-b from-[#363672] to-[#00378b] text-white">
+      <section className="py-16 px-4 md:px-6 lg:px-8 text-center relative bg-linear-to-b from-[#363672] to-[#018D43] text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold text-white">
             Ready to Transform Your Space?
@@ -172,7 +172,7 @@ export default function AboutPage() {
           <Link href="/contact">
             <Button
               size="lg"
-              className="bg-white hover:bg-[#002d70] text-[#00378b] px-8 py-6 rounded-full text-lg group"
+              className="bg-white hover:bg-[#002d70] text-[#018D43] px-8 py-6 rounded-full text-lg group"
             >
               <MessageCircle className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-1" />
               Get a Free Quote

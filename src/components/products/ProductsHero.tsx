@@ -26,7 +26,7 @@ export default function ProductsHero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-8 bg-yellow-400 text-black px-8 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-300"
+            className="mt-8 bg-[#FFB347] text-black px-8 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-300"
           >
             Shop Now
           </motion.button>

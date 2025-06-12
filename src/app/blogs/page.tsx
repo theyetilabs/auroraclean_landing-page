@@ -67,12 +67,12 @@ export default function BlogsPage() {
 
   return (
     <div className="w-full mx-auto pb-8 ">
-      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#00378b]/40 to-transparent">
+      <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/40 to-transparent">
         {" "}
         {/* Hero Section */}
         <section className="relative pt-30 pb-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto  ">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#00378b] to-red-500 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text">
               Blogs
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
