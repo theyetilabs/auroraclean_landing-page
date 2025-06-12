@@ -1,68 +1,124 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 interface Service {
   title: string;
   description: string;
   image: string;
+  price: string;
+  category: "commercial" | "residential" | "specialized";
 }
 
 const services: Service[] = [
   {
-    title: "House cleaning",
-    description:
-      "Our professional home cleaning services are designed to give you a spotless home without the hassle. We provide customized cleaning that fits your needs and schedule.",
-    image: "/images/Sectors/sector-01.png",
+    title: "Commercial Cleaning",
+    description: "Professional business cleaning solutions",
+    image: "/images/Services/Industry.png",
+    price: "From $150/visit",
+    category: "commercial",
   },
   {
-    title: "Office cleaning",
-    description:
-      "If you need recurring cleaning at the office or you just want us to come for a one-off visit, we can accommodate you. We clean for parties and other special events, and we can make your office space look its best.",
-    image: "/images/Sectors/sector-02.png",
+    title: "Office Cleaning",
+    description: "Tailored office maintenance solutions",
+    image: "/images/Services/Business.png",
+    price: "From $120/visit",
+    category: "commercial",
   },
   {
-    title: "Deep cleaning",
-    description:
-      "Are there parts of your homeland you just never feel like cleaning because they're too much of a challenge? Maybe you're thinking of the oven or the basement and you dread having to clean these areas.",
-    image: "/images/Sectors/sector-03.png",
-  },
-  {
-    title: "Move in out cleaning",
-    description:
-      "You've packed up and are ready to move into your new home, but the place you're leaving behind still needs a thorough cleaning. Moving out can be stressful, and cleaning may be the last thing on your mind.",
-    image: "/images/Sectors/sector-04.png",
-  },
-  {
-    title: "Post construction cleaning",
-    description:
-      "In the bustling world of construction, the final stages of a project often steal the spotlight, but there's a crucial detail that shouldn't be overlooked - post-construction cleaning.",
-    image: "/images/Sectors/sector-05.png",
-  },
-  {
-    title: "Recurring cleaning",
-    description:
-      "If you need to schedule cleaning services weekly, monthly, or on some other regular schedule, give us a call. We can provide scheduled cleaning services as often as you need, with special discounts for recurring visits.",
-    image: "/images/Sectors/sector-01.png",
+    title: "Medical Cleaning",
+    description: "Healthcare facility sterilization",
+    image: "/images/Services/Health.png",
+    price: "From $200/visit",
+    category: "specialized",
   },
 ];
 
+type FilterType = "all" | "commercial" | "residential" | "specialized";
+
 const Services: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+
+  const filteredServices =
+    activeFilter === "all"
+      ? services
+      : services.filter((service) => service.category === activeFilter);
+
+  const filterCount = {
+    all: services.length,
+    commercial: services.filter((s) => s.category === "commercial").length,
+    residential: services.filter((s) => s.category === "residential").length,
+    specialized: services.filter((s) => s.category === "specialized").length,
+  };
+
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
-            SERVICES
+          <h2 className="text-5xl font-bold mb-4">
+            Our <span className="text-blue-600">Serv</span>
+            <span className="text-teal-600">ices</span>
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Comprehensive cleaning solutions tailored to meet the unique needs
+            of every space. From commercial offices to specialized medical
+            facilities, we deliver excellence in every service.
           </p>
-          <h2 className="text-4xl font-bold">Services We Provide</h2>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <button
+            onClick={() => setActiveFilter("all")}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
+              ${
+                activeFilter === "all"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600"
+              }`}
+          >
+            All Services ({filterCount.all})
+          </button>
+          <button
+            onClick={() => setActiveFilter("commercial")}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
+              ${
+                activeFilter === "commercial"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600"
+              }`}
+          >
+            Commercial ({filterCount.commercial})
+          </button>
+          <button
+            onClick={() => setActiveFilter("residential")}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
+              ${
+                activeFilter === "residential"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600"
+              }`}
+          >
+            Residential ({filterCount.residential})
+          </button>
+          <button
+            onClick={() => setActiveFilter("specialized")}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
+              ${
+                activeFilter === "specialized"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600"
+              }`}
+          >
+            Specialized ({filterCount.specialized})
+          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {filteredServices.map((service) => (
             <div
               key={service.title}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64">
                 <Image
@@ -71,29 +127,47 @@ const Services: React.FC = () => {
                   fill
                   className="object-cover"
                 />
+                <div className="absolute top-4 left-4">
+                  <div className="bg-white p-3 rounded-full">
+                    <svg
+                      className="w-6 h-6 text-blue-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-blue-600 font-medium mb-4">
                   {service.description}
                 </p>
-                <button className="bg-[#FFB347] text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-yellow-500 transition-colors duration-200 flex items-center gap-2">
-                  Learn more
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
+                <div className="flex justify-between items-center">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex items-center gap-2">
+                    View Details
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
