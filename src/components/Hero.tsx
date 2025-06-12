@@ -42,9 +42,9 @@ export default function Hero() {
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
-            poster="/images/hero-placeholder.png" // Add a poster image for better initial load
+            poster="/logo.png" // Add a poster image for better initial load
           >
-            <source src="/video/hero-v3.mp4" type="video/mp4" />
+            <source src="/video/hero.mp4" type="video/mp4" />
           </video>
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white  w-1/2 " />

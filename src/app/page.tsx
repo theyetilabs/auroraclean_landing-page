@@ -15,9 +15,7 @@ export default function Home() {
       <div className="relative">
         <Hero />
         <TrustedBy />
-
         <Mission />
-
         <GlowingCardsGrid
           cards={[
             {
