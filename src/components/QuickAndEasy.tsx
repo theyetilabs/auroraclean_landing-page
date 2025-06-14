@@ -14,21 +14,21 @@ interface StepProps {
 const stepData = [
   {
     icon: <Calendar className="w-8 h-8 md:w-10 md:h-10" />, // icon size
-    title: "Free Quote",
-    description: "Tell us about your home and choose the date you want",
+    title: "Schedule Your Service",
+    description: "Easily share your cleaning needs and preferred date with us.",
     highlight: true,
   },
   {
     icon: <ClipboardCheck className="w-8 h-8 md:w-10 md:h-10" />, // icon size
-    title: "Clean",
+    title: "Expert Cleaning",
     description:
-      "Our seasoned team of full-time cleaners will transform your home",
+      "Our dedicated team of full-time professionals will meticulously clean and refresh your property.",
   },
   {
     icon: <SmilePlus className="w-8 h-8 md:w-10 md:h-10" />, // icon size
-    title: "Relax",
+    title: "Enjoy Your Beautiful Space",
     description:
-      "Sit back and enjoy how amazing your home or business looks now",
+      "Step back and appreciate the comfort and beauty of a perfectly cleaned environment.",
   },
 ];
 
@@ -83,10 +83,11 @@ export default function QuickAndEasy() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-blue-700 mb-2">
-            HOW IT WORKS
+            Aurora Clean
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Quick and <span className="text-green-600">Easy</span>
+            Your Partner for a Perfectly{" "}
+            <span className="text-green-600">Clean Space</span>
           </h2>
         </div>
         {/* Steps with connecting line */}

@@ -47,7 +47,13 @@ export default function ServicePage({
   ) as ServiceType;
 
   if (!service) {
-    return <div>Service not found</div>;
+    return (
+      <div className="min-h-screen bg-gray-50 mt-40">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+          Service not found
+        </h1>
+      </div>
+    );
   }
 
   return (
