@@ -5,11 +5,11 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 export default function StudentAvatars() {
   // Using placeholder images from UI Faces for testing
   const avatars = [
-    "/images/hero/01.png",
-    "/images/hero/04.png",
-    "/images/hero/05.png",
-    "/images/hero/02.png",
-    "/images/hero/03.png",
+    "/images/headshot/headshot-01.png",
+    "/images/headshot/headshot-02.png",
+    "/images/headshot/headshot-03.png",
+    "/images/headshot/headshot-04.png",
+    "/images/headshot/headshot-05.png",
   ];
 
   return (

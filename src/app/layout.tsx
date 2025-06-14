@@ -10,41 +10,38 @@ const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   keywords: [
-    "SSW Program Nepal to Japan",
-    "Japan Work Visa for Nepalese",
-    "Japanese Language School Kathmandu",
-    "Job Placement Japan Nepal",
-    "Visa Services Japan Nepal",
-    "Customer Group",
-    "Best SSW Program Nepal to Japan",
-    "Top Japan Work Visa for Nepalese",
-    "Best Japanese Language School Kathmandu",
-    "Leading Job Placement Japan Nepal",
-    "Best Visa Services Japan Nepal",
-    "Sushi bomber kathmandu",
-    "Sushi bomber pokhara",
-    "Sushi bomber butwal",
-    "Sushi bomber chitwan",
+    "Cleaning Services Australia",
+    "Cleaning Services Nepal",
+    "Cleaning Services Rarotonga",
+    "Cleaning Services Christchurch",
+    "Cleaning Services Wellington",
+    "Cleaning Services Perth",
+    "Cleaning Services Brisbane",
+    "Cleaning Services Adelaide",
+    "Cleaning Services Sydney",
+    "Cleaning Services Melbourne",
+    "Cleaning Services Gold Coast",
+    "Cleaning Services Sunshine Coast",
+    "Cleaning Services Toowoomba",
   ].join(", "),
-  authors: [{ name: "Customer Group" }],
-  creator: "Customer Group",
-  publisher: "Customer Group",
+  authors: [{ name: "Aurora Cleaning Services" }],
+  creator: "Aurora Cleaning Services",
+  publisher: "Aurora Cleaning Services",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://customergroup.com.np"),
+  metadataBase: new URL("https://auroracleaning.com.au"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title:
-      "Customer Group - Leading SSW Program & Japanese Language School in Nepal",
+    title: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
     description:
-      "Customer Group Nepal specializes in empowering Nepalese individuals to work in Japan through the SSW Program. Benefit from our expert Japanese language classes, high visa success rate, and extensive job placement network. Start your journey to Japan with us.",
+      "Aurora Cleaning Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
     url: "https://customergroup.com.np",
-    siteName: "Customer Group",
+    siteName: "Aurora Cleaning Services",
     locale: "en_US",
     type: "website",
     images: [
@@ -52,16 +49,15 @@ export const metadata: Metadata = {
         url: "/images/hero-placeholder.png",
         width: 1200,
         height: 630,
-        alt: "Customer Group - SSW Program & Japanese Language School",
+        alt: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Customer Group - Leading SSW Program & Japanese Language School in Nepal",
+    title: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
     description:
-      "Customer Group Nepal specializes in empowering Nepalese individuals to work in Japan through the SSW Program. Benefit from our expert Japanese language classes, high visa success rate, and extensive job placement network. Start your journey to Japan with us.",
+      "Aurora Cleaning Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
     images: ["/images/hero-placeholder.png"],
   },
   robots: {
@@ -78,8 +74,9 @@ export const metadata: Metadata = {
   // verification: {
   //   google: "your-google-site-verification",
   // },
-  title: "Customer Group",
-  description: "Your SSW Journey to Japan with us",
+  title: "Aurora Cleaning Services",
+  description:
+    "Aurora Cleaning Services - Leading Cleaning Services in Australia",
 };
 
 export default function RootLayout({

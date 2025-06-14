@@ -42,7 +42,7 @@ export default function Hero() {
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
-            poster="/logo.png" // Add a poster image for better initial load
+            poster="/images/hero-image.png" // Add a poster image for better initial load
           >
             <source src="/video/hero.mp4" type="video/mp4" />
           </video>
@@ -89,7 +89,7 @@ export default function Hero() {
                 className="group flex items-center gap-2 bg-[#018D43] hover:bg-[#0099db] text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <MessageCircle className="w-6 h-6" />
-                <span>Free Consultation</span>
+                <span>Get Quotes</span>
                 <svg
                   className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                   fill="none"
@@ -111,17 +111,8 @@ export default function Hero() {
 
       {/* Stats Section */}
       <section className="bg-[#018D43] py-4 relative">
-        {/* Horizontal Line */}
-        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2">
-          <div className="border-t border-white/20 w-full"></div>
-        </div>
-
-        {/* Vertical Lines */}
-        <div className="hidden lg:block absolute top-8 bottom-8 left-1/3 w-px bg-white/20"></div>
-        <div className="hidden lg:block absolute top-8 bottom-8 left-2/3 w-px bg-white/20"></div>
-
         <div className="container relative mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 ">
             {stats.map((stat, index) => (
               <StatsCounter
                 key={index}

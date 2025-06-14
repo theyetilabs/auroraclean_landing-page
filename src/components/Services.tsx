@@ -1,39 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-
-interface Service {
-  title: string;
-  description: string;
-  image: string;
-  price: string;
-  category: "commercial" | "residential" | "specialized";
-}
-
-const services: Service[] = [
-  {
-    title: "Commercial Cleaning",
-    description: "Professional business cleaning solutions",
-    image: "/images/Services/Industry.png",
-    price: "From $150/visit",
-    category: "commercial",
-  },
-  {
-    title: "Office Cleaning",
-    description: "Tailored office maintenance solutions",
-    image: "/images/Services/Business.png",
-    price: "From $120/visit",
-    category: "commercial",
-  },
-  {
-    title: "Medical Cleaning",
-    description: "Healthcare facility sterilization",
-    image: "/images/Services/Health.png",
-    price: "From $200/visit",
-    category: "specialized",
-  },
-];
-
+import { services } from "@/lib/constants";
+import Link from "next/link";
 type FilterType = "all" | "commercial" | "residential" | "specialized";
 
 const Services: React.FC = () => {
@@ -56,7 +25,7 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-4">
-            Our <span className="text-blue-600">Serv</span>
+            Our <span className="text-[#01401e]">Serv</span>
             <span className="text-teal-600">ices</span>
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
@@ -73,7 +42,7 @@ const Services: React.FC = () => {
             className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
               ${
                 activeFilter === "all"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#01401e] text-white"
                   : "bg-gray-100 text-gray-600"
               }`}
           >
@@ -84,7 +53,7 @@ const Services: React.FC = () => {
             className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
               ${
                 activeFilter === "commercial"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#01401e] text-white"
                   : "bg-gray-100 text-gray-600"
               }`}
           >
@@ -95,7 +64,7 @@ const Services: React.FC = () => {
             className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
               ${
                 activeFilter === "residential"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#01401e] text-white"
                   : "bg-gray-100 text-gray-600"
               }`}
           >
@@ -106,7 +75,7 @@ const Services: React.FC = () => {
             className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 
               ${
                 activeFilter === "specialized"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#01401e] text-white"
                   : "bg-gray-100 text-gray-600"
               }`}
           >
@@ -117,13 +86,13 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
             <div
-              key={service.title}
+              key={service.slug}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={service.service_name}
                   fill
                   className="object-cover"
                 />
@@ -146,27 +115,31 @@ const Services: React.FC = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-blue-600 font-medium mb-4">
+                <h3 className="text-xl font-bold mb-2">
+                  {service.service_name}
+                </h3>
+                <p className="text-[#007436] font-medium mb-4 line-clamp-3">
                   {service.description}
                 </p>
                 <div className="flex justify-between items-center">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex items-center gap-2">
-                    View Details
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </button>
+                  <Link href={`/service/${service.slug}`}>
+                    <button className="bg-[#01401e] hover:bg-[#007436] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex items-center gap-2">
+                      View Details
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

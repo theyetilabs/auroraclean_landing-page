@@ -49,7 +49,7 @@ export default function StatsCounter({
         <div className="text-3xl md:text-4xl font-bold text-white mb-4">
           {displayValue}
         </div>
-        <div className="text-sm md:text-base text-gray-200 max-w-[200px] mx-auto">
+        <div className="text-sm md:text-base text-gray-200 max-w-[400px] mx-auto">
           {label}
         </div>
 
