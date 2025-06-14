@@ -2,48 +2,53 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Facebook,
-  Instagram,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail, Phone } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
-import { YetiLabsIcon } from "@/components/ui/icons/YetiLabs";
 import { TikTokIcon } from "@/components/ui/icons/TikTok";
 
 const footerLinks = {
   about: [
     { label: "About Us", href: "/about" },
-    { label: "Branches", href: "/contact#branches" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Why Choose Us", href: "/why-choose-us" },
+    { label: "Sustainability", href: "/sustainability" },
+    { label: "Testimonials", href: "/testimonials" },
   ],
   services: [
     {
-      label: "Japanese Language Training",
-      href: "/service/japanese-language-training",
+      label: "Business & Corporate(5 services)",
+      href: "/service/business-corporate",
     },
     {
-      label: "Visa Processing",
-      href: "/service/visa-processing",
+      label: "Healthcare & Social Services(4 services)",
+      href: "/service/healthcare-social-services",
     },
     {
-      label: "Job Placement",
-      href: "/service/job-placement",
+      label: "Hospitality & Leisure(3 services)",
+      href: "/service/hospitality-leisure",
     },
+    { label: "Industrial(4 services)", href: "/service/industrial" },
+    {
+      label: "Residential & Specialized(3 services)",
+      href: "/service/residential-specialized",
+    },
+    {
+      label: "Sustainable Practices(1 service)",
+      href: "/service/sustainable-practices",
+    },
+    { label: "Explore All Services", href: "/services" },
   ],
   resources: [
     { label: "Blog", href: "/blogs" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Why Choose Us", href: "/why-choose-us" },
+    { label: "FAQs", href: "/faqs" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
   ],
   contact: {
-    email: "hello@customergroup.com.np",
-    phone: ["+977 9704591439"],
-    address:
-      "Raj Shree Complex (4th Floor), Ram Mandir Line,Traffic Chowk, BUTWAL, NEPAL",
+    phone: ["0406 158 054"],
+    email: "hello@auroraclean.com.au",
+    request: "Request a Free Quote",
+    social: ["Facebook", "Twitter", "LinkedIn"],
   },
   contactHead: {
     email: "ktm@customergroup.com.np",
@@ -76,9 +81,9 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-[#1244CE] to-[#018D43] text-white py-16 relative">
+    <footer className="bg-gradient-to-t from-[#01401e] to-[#018D43] text-white py-16 relative">
       <BackgroundBeams className="z-10" />
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-14 gap-8 relative z-20">
         {/* Logo and Contact */}
         <div className="md:col-span-3 space-y-6">
           <div className="bg-white rounded-lg p-4 w-fit relative">
@@ -107,10 +112,10 @@ export default function Footer() {
                 {footerLinks.contact.phone.join(" | ")}
               </div>
             </div>
-            <div className="flex items-start gap-2">
+            {/* <div className="flex items-start gap-2">
               <MapPin size={16} className="text-gray-400 mt-1" />
               <p className="text-gray-400">{footerLinks.contact.address}</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -132,7 +137,7 @@ export default function Footer() {
         </div>
 
         {/* Services */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-4">
           <h3 className="text-lg font-medium mb-4">Services</h3>
           <ul className="space-y-3">
             {footerLinks.services.map((link) => (
@@ -183,29 +188,7 @@ export default function Footer() {
               </Button>
             </div>
           </div> */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-medium mb-4 ">Head Office</h3>
 
-            {/* <div className="flex items-center gap-2">
-              <Mail size={16} className="text-gray-400" />
-              <a
-                href={`mailto:${footerLinks.contactHead.email}`}
-                className="text-gray-400 hover:text-white"
-              >
-                {footerLinks.contactHead.email}
-              </a>
-            </div> */}
-            <div className="flex items-center gap-2">
-              <Phone size={16} className="text-gray-400" />
-              <div className="text-gray-400">
-                {footerLinks.contactHead.phone.join(" | ")}
-              </div>
-            </div>
-            <div className="flex items-start gap-2">
-              <MapPin size={16} className="text-gray-400 mt-1" />
-              <p className="text-gray-400">{footerLinks.contactHead.address}</p>
-            </div>
-          </div>
           <div>
             <h3 className="text-lg font-medium mb-4">Follow Us</h3>
             <div className="flex gap-4">
@@ -229,11 +212,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/10 relative z-20">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p className="text-xs flex items-center gap-2 flex-wrap">
-            © 2025 CustomerGroup.com.np. DEVELOPED IN PARTNERSHIP WITH{" "}
-            <Link href="https://theyetilabs.com" target="_blank">
-              YETI LABS
-            </Link>
-            <YetiLabsIcon />
+            Aurora Cleaning Service: Keeping Sydney Spotless, Sustainably |
+            Serving 600+ Suburbs | © {new Date().getFullYear()}.
           </p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-white">

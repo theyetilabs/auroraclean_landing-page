@@ -9,7 +9,7 @@ const content = [
     description:
       "We begin with a one-on-one consultation to understand your goals, assess your Japanese language level, and outline your visa needs. Get a tailored plan to start your journey.",
     content: (
-      <div className="relative h-full w-full bg-[#1244CE]">
+      <div className="relative h-full w-full bg-[#01401e]">
         <Image
           src="/images/infinite-section/infinite-1.png"
           alt="Personalized Consultation"

@@ -2,6 +2,7 @@ export const services = [
   {
     slug: "commercial-cleaning-services",
     service_name: "Commercial Cleaning Services",
+    category: "commercial",
     introduction:
       "Aurora Clean Company is a trusted provider of professional commercial cleaning services in Sydney, NSW, catering to businesses of all sizes, from corporate offices to retail spaces. Our tailored solutions ensure a clean, safe, and welcoming environment that enhances productivity and leaves a lasting impression on clients and employees. With a focus on eco-friendly practices, we deliver high-quality cleaning that meets your business needs.",
     whats_included: [
@@ -102,5 +103,74 @@ export const services = [
       description:
         "At Aurora Clean, we understand that a clean commercial space is vital for creating a positive impression, boosting employee morale, and ensuring a healthy work environment. Our team of highly trained, police-checked cleaners uses state-of-the-art equipment and eco-friendly, TGA-approved products to deliver exceptional results tailored to your business needs.",
     },
+    description:
+      "Aurora Clean Company is a trusted provider of professional commercial cleaning services in Sydney, NSW, catering to businesses of all sizes, from corporate offices to retail spaces. Our tailored solutions ensure a clean, safe, and welcoming environment that enhances productivity and leaves a lasting impression on clients and employees. With a focus on eco-friendly practices, we deliver high-quality cleaning that meets your business needs.",
+    image: "/images/Services/Industry.png",
+  },
+];
+
+export const serviceCategories = [
+  {
+    category: "Business & Corporate",
+    services: [
+      { name: "Commercial Cleaning", slug: "commercial-cleaning" },
+      { name: "Office Cleaning", slug: "office-cleaning" },
+      { name: "Strata Cleaning", slug: "strata-cleaning" },
+      {
+        name: "Local Government Buildings Cleaning",
+        slug: "local-government-buildings-cleaning",
+      },
+      {
+        name: "Supermarket & Retail Store Cleaning",
+        slug: "supermarket-retail-store-cleaning",
+      },
+    ],
+  },
+  {
+    category: "Healthcare & Social Services",
+    services: [
+      { name: "Medical Cleaning", slug: "medical-cleaning" },
+      {
+        name: "Aged Care & Disability Homes Cleaning",
+        slug: "aged-care-disability-homes-cleaning",
+      },
+      { name: "Childcare Cleaning", slug: "childcare-cleaning" },
+      { name: "School Cleaning", slug: "school-cleaning" },
+    ],
+  },
+  {
+    category: "Hospitality & Leisure",
+    services: [
+      { name: "Restaurant & Cafe Cleaning", slug: "restaurant-cafe-cleaning" },
+      { name: "Gym Cleaning", slug: "gym-cleaning" },
+      {
+        name: "Airbnb & Short Stay Rentals Cleaning",
+        slug: "airbnb-short-stay-rentals-cleaning",
+      },
+    ],
+  },
+  {
+    category: "Industrial",
+    services: [
+      { name: "Warehouse Cleaning", slug: "warehouse-cleaning" },
+      { name: "Warehouse Sweeping", slug: "warehouse-sweeping" },
+      { name: "Warehouse Floor Scrubbing", slug: "warehouse-floor-scrubbing" },
+      { name: "After-Builders Cleaning", slug: "after-builders-cleaning" },
+    ],
+  },
+  {
+    category: "Residential & Specialized",
+    services: [
+      { name: "Carpet Cleaning", slug: "carpet-cleaning" },
+      {
+        name: "Vehicles & Mobile Detailing",
+        slug: "vehicles-mobile-detailing",
+      },
+      { name: "Church Cleaning", slug: "church-cleaning" },
+    ],
+  },
+  {
+    category: "Sustainable Practices",
+    services: [{ name: "Green Cleaning", slug: "green-cleaning" }],
   },
 ];

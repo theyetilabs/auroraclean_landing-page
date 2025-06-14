@@ -26,6 +26,7 @@ export default function ServiceHero({
           <h1 className="mt-2 text-4xl font-bold text-gray-900">
             {serviceName}
           </h1>
+
           <p className="mt-4 text-gray-600 leading-relaxed">{introduction}</p>
           <motion.button
             whileHover={{ scale: 1.05 }}

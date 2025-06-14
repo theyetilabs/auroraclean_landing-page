@@ -65,9 +65,11 @@ export default function Navbar() {
               className="relative group cursor-pointer"
               onMouseEnter={() => setActiveSubmenu("services")}
               onMouseLeave={() => setActiveSubmenu(null)}
-              onClick={() => router.push("/services")}
             >
-              <button className="flex items-center cursor-pointer gap-1 text-black font-bold hover:opacity-80">
+              <button
+                className="flex items-center cursor-pointer gap-1 text-black font-bold hover:opacity-80"
+                onClick={() => router.push("/services")}
+              >
                 Services{" "}
                 <ChevronDown
                   size={16}
@@ -76,21 +78,28 @@ export default function Navbar() {
               </button>
               <div
                 className={cn(
-                  "absolute top-full left-0 w-56 bg-white rounded-lg shadow-lg py-2 transition-all duration-300",
+                  "absolute top-full left-0 w-[700px] max-w-[90vw] bg-[#ffff]/90 rounded-2xl shadow-2xl py-6 px-6 transition-all duration-300 flex flex-col gap-2 ",
                   activeSubmenu === "services"
-                    ? "opacity-100 visible"
-                    : "opacity-0 invisible"
+                    ? "opacity-100 visible pointer-events-auto"
+                    : "opacity-0 invisible pointer-events-none"
                 )}
+                style={{ zIndex: 100 }}
+                role="menu"
+                aria-label="Services submenu"
               >
-                {services.map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/service/${item.slug}`}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-sm transition-colors"
-                  >
-                    {item.service_name}
-                  </Link>
-                ))}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {services.map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/service/${item.slug}`}
+                      className="flex flex-col items-start gap-2 rounded-xl p-4 transition-colors duration-200 min-w-[150px] group"
+                    >
+                      <span className=" text-black text-sm mb-1 text-nowrap">
+                        {item.service_name}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -123,7 +132,7 @@ export default function Navbar() {
                 : "bg-white text-[#018D43] hover:bg-gray-100"
             )}
           >
-            <MessageCircle size={18} /> Free Consultation
+            <MessageCircle size={18} /> Get Quotes
           </Link>
         </div>
 
@@ -213,7 +222,7 @@ export default function Navbar() {
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <MessageCircle size={18} /> Free Consultation
+                <MessageCircle size={18} /> Get Quotes
               </Link>
             </div>
           </div>
@@ -228,7 +237,7 @@ export default function Navbar() {
           className="group flex items-center gap-2 bg-gradient-to-r from-[#018D43] to-transparent hover:bg-[#0099db] text-white px-6 py-3  text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
         >
           <MessageCircle className="w-5 h-5" />
-          <span>Get Free Consultation</span>
+          <span>Get Quotes</span>
           <svg
             className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
             fill="none"
