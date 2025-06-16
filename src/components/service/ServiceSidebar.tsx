@@ -62,26 +62,44 @@ export default function ServiceSidebar({
         </div>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="bg-yellow-100 rounded-lg p-6"
-      >
-        <h3 className="text-xl font-semibold mb-4">
-          Looking for the cleaning service in {region}?
-        </h3>
-        <p className="mb-6">{contact.note}</p>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="flex items-center gap-2 cursor-pointer"
-        >
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-          </svg>
-          <span className="font-medium">{contact.phone}</span>
-        </motion.div>
-      </motion.div>
+      <div className="w-full h-auto flex flex-col justify-center items-center rounded-[2.5rem] bg-gradient-to-br from-yellow-300 via-yellow-100 to-green-100 p-8 md:p-12">
+        <div className="flex-1 flex flex-col justify-center items-center text-center">
+          <div className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 leading-snug">
+            Looking for the cleaning
+            <br />
+            service in {region}?
+            <br />
+            Contact us now!
+          </div>
+          <div className="flex justify-center">
+            <div
+              className="flex cursor-pointer items-center gap-4 bg-white rounded-full px-6 py-3 shadow-md"
+              onClick={() => {
+                window.open(`tel:${contact.phone}`, "_blank");
+              }}
+            >
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-yellow-400 text-white text-2xl">
+                <svg
+                  className="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                  />
+                </svg>
+              </span>
+              <span className="text-lg md:text-xl font-medium text-gray-900 tracking-wide select-all">
+                {contact.phone}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

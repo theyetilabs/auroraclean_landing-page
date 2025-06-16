@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Facebook, Instagram, Youtube, Mail, Phone } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { TikTokIcon } from "@/components/ui/icons/TikTok";
+import { YetiLabsIcon } from "./ui/icons/YetiLabs";
 
 const footerLinks = {
   about: [
@@ -58,22 +59,22 @@ const footerLinks = {
   social: [
     {
       label: "Facebook",
-      href: "https://www.facebook.com/sushibombernepal",
+      href: "https://www.facebook.com/Auroracleaningserv",
       icon: <Facebook size={20} />,
     },
     {
       label: "Instagram",
-      href: "https://www.instagram.com/sushibomber.np",
+      href: "https://instagram.com/auroracleaningservices",
       icon: <Instagram size={20} />,
     },
     {
       label: "YouTube",
-      href: "https://www.youtube.com/@sushibombernepal",
+      href: "https://www.youtube.com/@auroracleaningservices",
       icon: <Youtube size={20} />,
     },
     {
       label: "TikTok",
-      href: "https://www.tiktok.com/@sushibombernepal",
+      href: "https://www.tiktok.com/@auroracleaningservices",
       icon: <TikTokIcon size={20} />,
     },
   ],
@@ -212,8 +213,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/10 relative z-20">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p className="text-xs flex items-center gap-2 flex-wrap">
-            Aurora Cleaning Service: Keeping Sydney Spotless, Sustainably |
-            Serving 600+ Suburbs | © {new Date().getFullYear()}.
+            © 2025 CustomerGroup.com.np. DEVELOPED IN PARTNERSHIP WITH Add
+            commentMore actions
+            <Link href="https://theyetilabs.com" target="_blank">
+              YETI LABS
+            </Link>
+            <YetiLabsIcon />{" "}
           </p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-white">

@@ -3,14 +3,10 @@
 import Image from "next/image";
 
 const companies = [
-  { name: "1", logo: "/images/logo/1.png" },
-  { name: "2", logo: "/images/logo/2.png" },
-  { name: "3", logo: "/images/logo/3.png" },
-  { name: "4", logo: "/images/logo/4.png" },
-  { name: "5", logo: "/images/logo/5.png" },
-  { name: "6", logo: "/images/logo/6.png" },
-  { name: "7", logo: "/images/logo/7.png" },
-  { name: "8", logo: "/images/logo/8.png" },
+  { name: "1", logo: "/images/partners/partners-01.png" },
+  { name: "2", logo: "/images/partners/partners-02.png" },
+  { name: "3", logo: "/images/partners/partners-03.png" },
+  { name: "4", logo: "/images/partners/partners-04.png" },
 ];
 
 export default function TrustedBy() {

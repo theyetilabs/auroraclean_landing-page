@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { MessageCircle } from "lucide-react";
 import { EvervaultCard } from "@/components/ui/evervault-card";
+import { useStore } from "@/store/useStore";
 
 const values = [
   {
@@ -49,10 +49,10 @@ const industries = [
 ];
 
 export default function AboutPage() {
+  const { openGetQuotes } = useStore();
   return (
     <main className="gradient min-h-screen relative overflow-hidden">
       <div className="relative flex flex-col justify-center items-center w-full bg-gradient-to-b from-[#018D43]/40 to-transparent">
-        {" "}
         {/* Hero Section */}
         <section className="relative pt-30 pb-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto  ">
           <div className="text-center space-y-4">
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-[#018D43]/10 to-[#018D43]/30">
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
-                src="/images/cleaning-service.jpg"
+                src="/images/about-us/about-us-01.png"
                 alt="Professional Cleaning Service"
                 fill
                 className="object-cover"
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* CEO Message Section */}
-      <section className="relative py-16 px-4 md:px-6 lg:px-8 bg-[#363672]">
+      <section className="relative py-16 px-4 md:px-6 lg:px-8 bg-[#018d43]">
         <BackgroundBeams className="absolute inset-0 z-0" />
         <div className="relative z-10 max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -159,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8 text-center relative bg-linear-to-b from-[#363672] to-[#018D43] text-white">
+      <section className="py-16 px-4 md:px-6 lg:px-8 text-center relative bg-linear-to-b from-[#018d43] to-[#018D43] text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold text-white">
             Ready to Transform Your Space?
@@ -169,15 +169,14 @@ export default function AboutPage() {
             our professional cleaning expertise. Contact us today for a
             customized cleaning solution.
           </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              className="bg-white hover:bg-[#002d70] text-[#018D43] px-8 py-6 rounded-full text-lg group"
-            >
-              <MessageCircle className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-1" />
-              Get a Free Quote
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            className="bg-white hover:bg-[#002d70] text-[#018D43] px-8 py-6 rounded-full text-lg group"
+            onClick={() => openGetQuotes()}
+          >
+            <MessageCircle className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-1" />
+            Get a Free Quote
+          </Button>
         </div>
       </section>
     </main>

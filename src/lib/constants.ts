@@ -125,6 +125,7 @@ export const serviceCategories = [
         slug: "supermarket-retail-store-cleaning",
       },
     ],
+    image: "/images/services-icons/Business.svg",
   },
   {
     category: "Healthcare & Social Services",
@@ -137,6 +138,7 @@ export const serviceCategories = [
       { name: "Childcare Cleaning", slug: "childcare-cleaning" },
       { name: "School Cleaning", slug: "school-cleaning" },
     ],
+    image: "/images/services-icons/Health.svg",
   },
   {
     category: "Hospitality & Leisure",
@@ -148,6 +150,7 @@ export const serviceCategories = [
         slug: "airbnb-short-stay-rentals-cleaning",
       },
     ],
+    image: "/images/services-icons/Hospitality.svg",
   },
   {
     category: "Industrial",
@@ -157,6 +160,7 @@ export const serviceCategories = [
       { name: "Warehouse Floor Scrubbing", slug: "warehouse-floor-scrubbing" },
       { name: "After-Builders Cleaning", slug: "after-builders-cleaning" },
     ],
+    image: "/images/services-icons/Industrial.svg",
   },
   {
     category: "Residential & Specialized",
@@ -168,9 +172,6 @@ export const serviceCategories = [
       },
       { name: "Church Cleaning", slug: "church-cleaning" },
     ],
-  },
-  {
-    category: "Sustainable Practices",
-    services: [{ name: "Green Cleaning", slug: "green-cleaning" }],
+    image: "/images/services-icons/Residential.svg",
   },
 ];

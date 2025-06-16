@@ -1,17 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MessageCircle, Menu, X, ChevronDown } from "lucide-react";
 import { services } from "@/lib/constants";
 import { useRouter } from "next/navigation";
-export default function Navbar() {
+import { Button } from "@/components/ui/button";
+import { useStore } from "@/store/useStore";
+
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const router = useRouter();
+  const { openGetQuotes } = useStore();
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -78,7 +83,7 @@ export default function Navbar() {
               </button>
               <div
                 className={cn(
-                  "absolute top-full left-0 w-[700px] max-w-[90vw] bg-[#ffff]/90 rounded-2xl shadow-2xl py-6 px-6 transition-all duration-300 flex flex-col gap-2 ",
+                  "absolute top-full left-[-100%] w-[700px] max-w-[90vw] bg-white rounded-2xl shadow-2xl py-10 px-12 transition-all duration-300 flex flex-col gap-2 ",
                   activeSubmenu === "services"
                     ? "opacity-100 visible pointer-events-auto"
                     : "opacity-0 invisible pointer-events-none"
@@ -87,19 +92,87 @@ export default function Navbar() {
                 role="menu"
                 aria-label="Services submenu"
               >
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {services.map((item) => (
-                    <Link
-                      key={item.slug}
-                      href={`/service/${item.slug}`}
-                      className="flex flex-col items-start gap-2 rounded-xl p-4 transition-colors duration-200 min-w-[150px] group"
-                    >
-                      <span className=" text-black text-sm mb-1 text-nowrap">
-                        {item.service_name}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
+                {/* Map services into 3 columns, fill with dummy if less than 9 */}
+                {(() => {
+                  const columns = 3;
+                  const minItems = 9;
+                  const filledServices =
+                    services.length < minItems
+                      ? [
+                          ...services,
+                          ...Array.from(
+                            { length: minItems - services.length },
+                            (_, i) => ({
+                              slug: `dummy-${services.length + i + 1}`,
+                              service_name: `Dummy Service ${
+                                services.length + i + 1
+                              }`,
+                              category: "dummy",
+                              introduction: "This is a dummy service.",
+                              whats_included: [
+                                {
+                                  category: "General",
+                                  description: "Dummy description.",
+                                },
+                              ],
+                              service_area: {
+                                region: "Dummy Region",
+                                suburbs_count: 0,
+                                covered_areas: ["Dummy Area"],
+                              },
+                              contact: {
+                                phone: "0000000000",
+                                email: "dummy@example.com",
+                                website: "dummy.com",
+                                note: "Dummy note.",
+                              },
+                              faq: [
+                                {
+                                  question: "Dummy question?",
+                                  answer: "Dummy answer.",
+                                },
+                              ],
+                              why_choose_us: {
+                                highlights: ["Dummy highlight"],
+                                description: "Dummy why choose us.",
+                              },
+                              description: "Dummy service description.",
+                              image: "/images/Services/dummy.png",
+                            })
+                          ),
+                        ]
+                      : services;
+                  const colLength = Math.ceil(filledServices.length / columns);
+                  const serviceColumns = Array.from(
+                    { length: columns },
+                    (_, i) =>
+                      filledServices.slice(i * colLength, (i + 1) * colLength)
+                  );
+                  return (
+                    <div className="flex gap-16">
+                      {serviceColumns.map((col, idx) => (
+                        <div
+                          key={idx}
+                          className="flex flex-col min-w-[180px] gap-3"
+                        >
+                          {col.map((item) => (
+                            <Link
+                              key={item.slug}
+                              href={
+                                item.slug.startsWith("dummy-")
+                                  ? "#"
+                                  : `/service/${item.slug}`
+                              }
+                              className="text-gray-700 text-sm hover:text-black font-bold transition-colors"
+                            >
+                              {item.service_name}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  );
+                })()}
               </div>
             </div>
 
@@ -113,18 +186,22 @@ export default function Navbar() {
             >
               <span className="text-black font-bold">Blog</span>
             </NavLink>
-            <NavLink href="/about" setIsMobileMenuOpen={setIsMobileMenuOpen}>
-              <span className="text-black font-bold">About</span>
+
+            <NavLink
+              href="/why-choose-us"
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+            >
+              <span className="text-black font-bold">Why Choose Us?</span>
             </NavLink>
+
             <NavLink href="/contact" setIsMobileMenuOpen={setIsMobileMenuOpen}>
               <span className="text-black font-bold">Contact</span>
             </NavLink>
           </div>
 
           {/* Inquiry Button */}
-          <Link
-            href="https://forms.gle/zUzeXaLBSKGPeUiu7"
-            target="_blank"
+          <Button
+            onClick={openGetQuotes}
             className={cn(
               "hidden md:flex px-6 py-4 rounded-full font-sm  transition-all items-center gap-2 font-bold",
               scrolled
@@ -133,7 +210,7 @@ export default function Navbar() {
             )}
           >
             <MessageCircle size={18} /> Get Quotes
-          </Link>
+          </Button>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -206,24 +283,33 @@ export default function Navbar() {
                 <span className="text-black font-bold text-xl">About</span>
               </NavLink>
               <NavLink
+                href="/why-choose-us"
+                setIsMobileMenuOpen={setIsMobileMenuOpen}
+              >
+                <span className="text-black font-bold text-xl">
+                  Why Choose Us?
+                </span>
+              </NavLink>
+              <NavLink
                 href="/contact"
                 setIsMobileMenuOpen={setIsMobileMenuOpen}
               >
                 <span className="text-black font-bold text-xl">Contact</span>
               </NavLink>
-              <Link
-                href="https://forms.gle/zUzeXaLBSKGPeUiu7"
-                target="_blank"
+              <Button
+                onClick={() => {
+                  openGetQuotes();
+                  setIsMobileMenuOpen(false);
+                }}
                 className={cn(
                   "px-6 py-4 rounded-full font-sm transition-all flex items-center gap-2 font-bold mt-4",
                   scrolled
                     ? "bg-[#018D43] text-white hover:bg-[#363672]"
                     : "bg-[#018D43] text-white hover:bg-[#363672]"
                 )}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 <MessageCircle size={18} /> Get Quotes
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -255,7 +341,7 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 function NavLink({
   href,
@@ -293,3 +379,5 @@ function NavLink({
     </Link>
   );
 }
+
+export default Navbar;
