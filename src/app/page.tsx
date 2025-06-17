@@ -36,12 +36,7 @@ export default function Home() {
               description:
                 "From daily maintenance to specialized COVID-19 sanitization and gym equipment cleaning, our wide-ranging services cater to all industries with top-tier results.",
             },
-            {
-              icon: <Sparkles className="text-2xl text-yellow-500" />,
-              title: "Exclusive Perks",
-              description:
-                "Enjoy exclusive discounts on hospital-grade wipes and sleek dispensers, designed to maintain hygiene between our visits, with fast 24-hour delivery.",
-            },
+
             {
               icon: <Cuboid className="text-2xl text-indigo-500" />,
               title: "Trusted Experience",

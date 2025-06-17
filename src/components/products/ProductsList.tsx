@@ -10,7 +10,7 @@ const products = [
     price: 79.99,
     features:
       "Hospital-grade antibacterial wipes, effective against bacteria and viruses.",
-    image: "/images/Sectors/sector-01.png",
+    image: "/images/Products/product-01.png",
   },
   {
     id: 2,
@@ -18,14 +18,14 @@ const products = [
     price: 159.99,
     features:
       "Durable, stylish, holds 1,200 wipes, ideal for gyms and studios.",
-    image: "/images/Sectors/sector-02.png",
+    image: "/images/Products/product-02.png",
   },
   {
     id: 3,
     name: "Silver Wipe Dispensers",
     price: 149.99,
     features: "Elegant silver finish, easy to refill, holds 1,200 wipes.",
-    image: "/images/Sectors/sector-03.png",
+    image: "/images/Products/product-03.png",
   },
 ];
 

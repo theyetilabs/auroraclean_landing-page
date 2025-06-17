@@ -27,12 +27,15 @@ export default function GlowingCardsGrid({
   return (
     <div
       className={cn(
-        "grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 auto-rows-fr w-full py-8 px-4",
+        "grid bg-white gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 auto-rows-fr w-full py-8 px-4",
         className
       )}
     >
       {cards.map((card, idx) => (
-        <div key={card.title + idx} className={cn("relative", "")}>
+        <div
+          key={card.title + idx}
+          className={cn("relative", idx === 1 && "row-span-2")}
+        >
           <GlowingEffect
             blur={10}
             spread={30}
@@ -42,8 +45,9 @@ export default function GlowingCardsGrid({
           />
           <Card
             className={cn(
-              "relative z-10 min-h-[180px] h-full flex flex-col justify-between bg-white/80 dark:bg-neutral-900/80 shadow-lg border-none overflow-hidden",
-              card.locked && "opacity-60 pointer-events-none"
+              "relative z-10 min-h-[180px] h-full flex flex-col justify-between bg-white/80 dark:bg-neutral-900/80 shadow-xl border-none overflow-hidden",
+              card.locked && "opacity-60 pointer-events-none",
+              idx === 1 && "row-span-2"
             )}
           >
             <CardHeader className="flex flex-col items-start gap-4 pb-2">
@@ -60,17 +64,19 @@ export default function GlowingCardsGrid({
                 {card.title}
               </CardTitle>
             </CardHeader>
-            <CardDescription className="px-6 flex-1 pb-8 text-gray-600 dark:text-gray-300">
-              <div className="flex-shrink-0 h-full max-h-[180px] w-full mb-4">
+            <CardDescription className="px-6 flex flex-col h-full pb-8 text-gray-600 dark:text-gray-300">
+              <div className="flex-grow-1  w-full mb-4 flex items-center justify-center">
                 <Image
-                  src={`/images/Why-us/${card.title.replace(" ", "-")}.png`}
+                  src={`/images/grid/0${idx + 1}.png`}
                   alt="logo"
                   width={9450}
                   height={9450}
-                  className="w-full h-full object-top object-cover rounded-lg overflow-hidden m-2"
+                  className="w-full h-full max-h-[100px] object-contain rounded-lg overflow-hidden m-2"
                 />
               </div>
-              {card.description}
+              <div className="flex-shrink-2  w-full mb-4 mt-2">
+                {card.description}
+              </div>
             </CardDescription>
           </Card>
         </div>

@@ -6,145 +6,145 @@ import Link from "next/link";
 
 const reasons = [
   {
-    title: "Proven Success and High Success Rates",
+    title: "Eco-Friendly Commitment",
     items: [
       {
-        title: "99.99% Visa Success Rate",
+        title: "Non-Toxic, Biodegradable Products",
         description:
-          "Our exceptional visa approval rate ensures you can confidently pursue your aspirations in Japan.",
+          "We use plant-based cleaning solutions free from harsh chemicals like bleach, ammonia, and phthalates, ensuring safety for your staff, clients, and pets.",
+        icon: "🌱",
+      },
+      {
+        title: "Certified Sustainability",
+        description:
+          "Our cleaning products meet rigorous standards, such as EPA's Safer Choice and Green Seal certifications, guaranteeing they are environmentally responsible and effective.",
         icon: "✓",
       },
       {
-        title: "99.99% Job Placement Rate",
+        title: "Sustainable Practices",
         description:
-          "Nearly every applicant secures a role, reflecting our commitment to your career success.",
-        icon: "💼",
-      },
-      {
-        title: "4,000+ Applicants Enrolled",
-        description:
-          "Our growing community of enrolled applicants showcases the trust we've earned.",
-        icon: "👥",
+          "We minimize waste with recyclable packaging and use energy-efficient equipment, supporting your business's green credentials.",
+        icon: "♻️",
       },
     ],
     image: "/images/why-choose-us/wcu-001.png",
   },
   {
-    title: "Expert and Qualified Team",
+    title: "Reliability and Punctuality",
     items: [
       {
-        title: "Experienced Instructors",
+        title: "Punctual Arrivals",
         description:
-          "Our young, energetic team of highly qualified Japanese language instructors uses diverse teaching methods.",
-        icon: "🎓",
+          "Our cleaning teams use GPS tracking to ensure they arrive on time, every time. No delays or disruptions—just dependable service you can count on.",
+        icon: "⏰",
       },
       {
-        title: "Professional Legal Assistance",
+        title: "24/7 Monitoring System",
         description:
-          "An in-house Japanese lawyer oversees visa processing, ensuring compliance with legal standards.",
-        icon: "⚖️",
+          "Our real-time cleaning management system tracks every shift, ensuring consistent quality and no missed tasks.",
+        icon: "📱",
       },
       {
-        title: "Industry Professionals",
+        title: "Proven Reliability",
         description:
-          "Specialized training programs, led by experts in fields like Nursing and Food Service.",
-        icon: "👨‍🏫",
+          "With over 220 gyms, 77 offices, 17 hotels, 33 restaurants, 9 warehouses, and 3 aged care homes served, our track record speaks for itself.",
+        icon: "📊",
       },
     ],
     image: "/images/why-choose-us/wcu-002.png",
   },
   {
-    title: "Comprehensive and Tailored Support",
+    title: "Expert Team & Advanced Technology",
     items: [
       {
-        title: "All-in-One Services",
+        title: "Certified Professionals",
         description:
-          "From curriculum-based language classes to job and study placements, we cover every step of your journey.",
-        icon: "🔄",
+          "Our cleaners are fully trained, certified, and insured, with expertise in commercial cleaning for diverse sectors.",
+        icon: "👨‍🏫",
       },
       {
-        title: "Personalized Guidance",
+        title: "Cutting-Edge Technology",
         description:
-          "We tailor our services to match your skills, aspirations, and goals.",
-        icon: "🎯",
+          "We use advanced tools like electrostatic sprayers and UV-C disinfection devices to eliminate pathogens and ensure hygienic spaces.",
+        icon: "🔬",
       },
       {
-        title: "Ongoing Support",
+        title: "Safety First",
         description:
-          "Post-placement assistance, including workplace cultural guidance and settling-in tips.",
-        icon: "🤝",
+          "Our rigorous safety protocols and insured staff provide peace of mind, ensuring your workplace is cleaned with care and professionalism.",
+        icon: "🛡️",
       },
     ],
     image: "/images/why-choose-us/wcu-003.png",
   },
   {
-    title: "Extensive Network and Partnerships",
+    title: "Tailored Solutions & Client Satisfaction",
     items: [
       {
-        title: "300+ Companies/Partners",
+        title: "Customized Cleaning Plans",
         description:
-          "Our robust network connects you to diverse opportunities in Japan's top industries.",
-        icon: "🌐",
+          "We design flexible schedules—daily, weekly, or monthly—tailored to your business type, size, and budget.",
+        icon: "📋",
       },
       {
-        title: "Industry Connections",
+        title: "Flexible Scheduling",
         description:
-          "Strong ties with sectors like Nursing Care, Construction, and Restaurants.",
-        icon: "🏢",
+          "Our services adapt to your hours, offering off-peak cleaning to avoid disruptions, ensuring your workplace remains operational.",
+        icon: "🕒",
       },
       {
-        title: "Trusted Employer Relationships",
+        title: "Satisfaction Guarantee",
         description:
-          "We work closely with verified and reputable employers to ensure job security, fair treatment, and long-term growth.",
-        icon: "🤝",
+          "We stand behind our work with a 100% satisfaction guarantee. If you're not thrilled with our service, we'll make it right at no extra cost.",
+        icon: "⭐",
       },
     ],
     image: "/images/why-choose-us/wcu-004.png",
   },
   {
-    title: "Transparent and Affordable Solutions",
+    title: "Extensive Experience",
     items: [
       {
-        title: "Transparent Policies",
+        title: "Diverse Client Base",
         description:
-          "No hidden fees or pre-charges—our fee structure is clear and straightforward.",
-        icon: "🔍",
+          "We serve a wide range of businesses including gyms, offices, hotels, restaurants, warehouses, and aged care homes.",
+        icon: "🏢",
       },
       {
-        title: "Scholarships",
+        title: "Industry Expertise",
         description:
-          "Available for deserving candidates, making quality education accessible.",
-        icon: "🎓",
+          "Our experience across various sectors allows us to understand and meet the unique cleaning needs of each industry.",
+        icon: "🎯",
       },
       {
-        title: "Affordability",
+        title: "Proven Track Record",
         description:
-          "High-quality services at cost-friendly prices ensure value for every applicant.",
-        icon: "💰",
+          "Our growing portfolio of satisfied clients across Sydney showcases our commitment to excellence in commercial cleaning.",
+        icon: "📈",
       },
     ],
     image: "/images/why-choose-us/wcu-005.png",
   },
   {
-    title: "Dynamic and Supportive Environment",
+    title: "Part of Asta Business Group",
     items: [
       {
-        title: "Dynamic Learning",
+        title: "Corporate Backing",
         description:
-          "Our innovative classrooms foster an energetic and interactive learning experience.",
-        icon: "⚡",
+          "As part of the Asta Business Group, we bring corporate-level resources and support to every cleaning project.",
+        icon: "🏛️",
       },
       {
-        title: "Convenient Facilities",
+        title: "Professional Standards",
         description:
-          "Hostel and bus facilities in Chitwan and Kathmandu provide a supportive environment.",
-        icon: "🏠",
+          "We maintain the highest standards of professionalism and service quality expected from a leading business group.",
+        icon: "🎖️",
       },
       {
-        title: "Integrity and Reliability",
+        title: "Sustainable Growth",
         description:
-          "We prioritize trust in every interaction, delivering on our promises.",
-        icon: "🤝",
+          "Our corporate backing ensures long-term stability and continuous improvement in our cleaning services.",
+        icon: "🌱",
       },
     ],
     image: "/images/why-choose-us/wcu-006.png",
@@ -213,7 +213,7 @@ export default function WhyChooseUsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-[#018D43] to-red-500 text-transparent bg-clip-text"
             >
-              Why Choose Us?
+              Why Choose Aurora Cleaning Service?
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -221,12 +221,14 @@ export default function WhyChooseUsPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-10"
             >
-              At Customer Group, we are more than just a consultancy—we are your
-              partner in achieving your dreams in Japan. With a proven track
-              record of empowering Nepali individuals through the Specified
-              Skilled Worker (SSW) Program and academic opportunities, we offer
-              unparalleled support in language training, visa processing, job
-              placement, and more.
+              Sydney&apos;s Trusted Partner for Sustainable Commercial Cleaning.
+              At Aurora Cleaning Service, we redefine commercial cleaning in
+              Sydney with a commitment to sustainability, reliability, and
+              excellence. As part of the Asta Business Group, we deliver
+              tailored cleaning solutions that transform workplaces into
+              spotless, healthy, and eco-friendly spaces. From gyms to offices
+              and restaurants, discover why Aurora is the preferred choice for
+              businesses across Sydney.
             </motion.p>
           </div>
         </section>
@@ -250,7 +252,7 @@ export default function WhyChooseUsPage() {
                   onClick={() => handleNavClick(index)}
                   className={`px-4 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap text-left text-sm lg:text-base ${
                     activeSection === index
-                      ? "bg-[#363672] text-white shadow-lg"
+                      ? "bg-[#01401e] text-white shadow-lg"
                       : "bg-white text-gray-600 hover:bg-gray-100"
                   }`}
                   aria-current={activeSection === index ? "page" : undefined}
@@ -281,7 +283,7 @@ export default function WhyChooseUsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gradient-to-b from-[#363672] to-[#018D43]/80 p-2 md:p-12  rounded-3xl"
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gradient-to-t  from-[#01401e] via-[#007436] to-[#018D43]/80 p-2 md:p-12  rounded-3xl"
                 >
                   <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
                     <Image
@@ -345,7 +347,7 @@ export default function WhyChooseUsPage() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            Our Commitment to You
+            Ready to Shine with Aurora?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -354,11 +356,9 @@ export default function WhyChooseUsPage() {
             viewport={{ once: true }}
             className="text-md mb-8 max-w-2xl mx-auto"
           >
-            We are dedicated to unlocking your potential in Japan by providing a
-            seamless, supportive, and successful experience. Whether you&apos;re
-            aiming for a job in Japan&apos;s workforce or pursuing higher
-            education, our comprehensive approach ensures you&apos;re equipped
-            with the skills, legal support, and opportunities to thrive.
+            Join hundreds of Sydney businesses trusting Aurora Cleaning Service
+            for clean, safe, and sustainable workplaces. Contact us today for a
+            free, no-obligation quote and experience the Aurora difference.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

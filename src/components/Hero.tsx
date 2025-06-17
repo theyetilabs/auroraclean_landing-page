@@ -3,6 +3,7 @@ import StudentAvatars from "./StudentAvatars";
 import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import StatsCounter from "./StatsCounter";
+import { useStore } from "@/store/useStore";
 
 const texts = ["— Professional & Reliable", "— Eco-friendly Solutions"];
 
@@ -16,6 +17,7 @@ const stats = [
 ];
 
 export default function Hero() {
+  const { openGetQuotes } = useStore();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -69,8 +71,8 @@ export default function Hero() {
               </div>
             </h1>
             <p className="text-lg text-[#018D43]">
-              Eco-friendly practices ensure health, safety, and environmental
-              benefits.
+              Eco-friendly practices ensure health,
+              <br /> safety, and environmental benefits.
             </p>
 
             {/* Student Count Section */}
@@ -83,9 +85,8 @@ export default function Hero() {
 
             {/* Consultation Button */}
             <div className="flex">
-              <a
-                href="https://forms.gle/zUzeXaLBSKGPeUiu7"
-                target="_blank"
+              <button
+                onClick={() => openGetQuotes()}
                 className="group flex items-center gap-2 bg-[#018D43] hover:bg-[#0099db] text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <MessageCircle className="w-6 h-6" />
@@ -103,7 +104,7 @@ export default function Hero() {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         </div>

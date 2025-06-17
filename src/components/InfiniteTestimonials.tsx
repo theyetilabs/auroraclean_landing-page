@@ -16,8 +16,8 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "The best cleaning service I&apos;ve ever used! They are thorough, professional, and always on time.",
-    author: "Sarah Johnson",
+      "Aurora Clean transformed my home! The team was professional and left everything spotless. Highly recommend!",
+    author: "John Smith",
     role: "Homeowner",
     image: "/images/headshot/headshot-01.png",
     rating: 5,
@@ -25,10 +25,37 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "NeatNest has transformed how I maintain my office space. Their attention to detail is remarkable.",
-    author: "Michael Chen",
+      "Eco-friendly and efficient—my office has never looked better. Thank you, Aurora Clean!",
+    author: "Emily Johnson",
     role: "Business Owner",
+    image: "/images/headshot/headshot-06.png",
+    rating: 5,
+    variant: "small",
+  },
+  {
+    quote:
+      "Great service and friendly staff. Booking was easy, and the results were amazing!",
+    author: "Michael Brown",
+    role: "Customer",
     image: "/images/headshot/headshot-02.png",
+    rating: 5,
+    variant: "medium",
+  },
+  {
+    quote:
+      "The attention to detail is unmatched. My house feels fresh and clean every time!",
+    author: "Sarah Davis",
+    role: "Homeowner",
+    image: "/images/headshot/headshot-07.png",
+    rating: 5,
+    variant: "large",
+  },
+  {
+    quote:
+      "Fast, reliable, and affordable. Aurora Clean is my go-to for all cleaning needs!",
+    author: "David Lee",
+    role: "Customer",
+    image: "/images/headshot/headshot-03.png",
     rating: 5,
     variant: "small",
   },
@@ -37,19 +64,44 @@ const testimonials: Testimonial[] = [
 const testimonials2: Testimonial[] = [
   {
     quote:
-      "The best cleaning service I&apos;ve ever used! They are thorough, professional, and always on time.",
-    author: "Sarah Johnson",
+      "Impressed by the thoroughness! My carpets look brand new after their service.",
+    author: "Lisa Anderson",
     role: "Homeowner",
-    image: "/images/headshot/headshot-03.png",
+    image: "/images/headshot/headshot-08.png",
+    rating: 5,
+    variant: "large",
+  },
+  {
+    quote: "Prompt and courteous team. Aurora Clean exceeded my expectations!",
+    author: "Robert Taylor",
+    role: "Business Owner",
+    image: "/images/headshot/headshot-04.png",
+    rating: 5,
+    variant: "small",
+  },
+  {
+    quote:
+      "A breath of fresh air! The eco-friendly approach is a big plus for me.",
+    author: "Anna Wilson",
+    role: "Customer",
+    image: "/images/headshot/headshot-09.png",
+    rating: 5,
+    variant: "medium",
+  },
+  {
+    quote: "Top-notch cleaning and great value. Will definitely use again!",
+    author: "James Martinez",
+    role: "Customer",
+    image: "/images/headshot/headshot-05.png",
     rating: 5,
     variant: "large",
   },
   {
     quote:
-      "NeatNest has transformed how I maintain my office space. Their attention to detail is remarkable.",
-    author: "Michael Chen",
-    role: "Business Owner",
-    image: "/images/headshot/headshot-04.png",
+      "The staff was amazing, and my place sparkles now. Highly satisfied!",
+    author: "Rachel Kim",
+    role: "Homeowner",
+    image: "/images/headshot/headshot-10.png",
     rating: 5,
     variant: "small",
   },
