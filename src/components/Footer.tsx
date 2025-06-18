@@ -13,34 +13,32 @@ const footerLinks = {
     { label: "Why Choose Us", href: "/why-choose-us" },
     { label: "Sustainability", href: "/sustainability" },
     { label: "Testimonials", href: "/testimonials" },
+    { label: "Blog", href: "/blogs" },
+    { label: "FAQs", href: "/faq" },
   ],
-  services: [
+  businessCorporate: [
+    { label: "Commercial Cleaning", href: "/service/commercial-cleaning" },
+    { label: "Office Cleaning", href: "/service/office-cleaning" },
+    { label: "Strata Cleaning", href: "/service/strata-cleaning" },
     {
-      label: "Business & Corporate(5 services)",
-      href: "/service/business-corporate",
+      label: "Local Government Buildings",
+      href: "/service/government-cleaning",
     },
-    {
-      label: "Healthcare & Social Services(4 services)",
-      href: "/service/healthcare-social-services",
-    },
-    {
-      label: "Hospitality & Leisure(3 services)",
-      href: "/service/hospitality-leisure",
-    },
-    { label: "Industrial(4 services)", href: "/service/industrial" },
-    {
-      label: "Residential & Specialized(3 services)",
-      href: "/service/residential-specialized",
-    },
-    {
-      label: "Sustainable Practices(1 service)",
-      href: "/service/sustainable-practices",
-    },
+    { label: "Supermarket & Retail", href: "/service/retail-cleaning" },
+  ],
+  healthcareSocial: [
+    { label: "Medical Cleaning", href: "/service/medical-cleaning" },
+    { label: "Aged Care & Disability", href: "/service/aged-care-cleaning" },
+    { label: "Childcare Cleaning", href: "/service/childcare-cleaning" },
+    { label: "School Cleaning", href: "/service/school-cleaning" },
+  ],
+  hospitalityLeisure: [
+    { label: "Restaurant & Cafe", href: "/service/restaurant-cleaning" },
+    { label: "Gym Cleaning", href: "/service/gym-cleaning" },
+    { label: "Airbnb & Short Stay", href: "/service/airbnb-cleaning" },
     { label: "Explore All Services", href: "/services" },
   ],
   resources: [
-    { label: "Blog", href: "/blogs" },
-    { label: "FAQs", href: "/faqs" },
     { label: "Gallery", href: "/gallery" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-of-service" },
@@ -118,6 +116,22 @@ export default function Footer() {
               <p className="text-gray-400">{footerLinks.contact.address}</p>
             </div> */}
           </div>
+          <div>
+            <h3 className="text-lg font-medium mb-4">Follow Us</h3>
+            <div className="flex gap-4">
+              {footerLinks.social.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* About */}
@@ -138,37 +152,57 @@ export default function Footer() {
         </div>
 
         {/* Services */}
-        <div className="md:col-span-4">
-          <h3 className="text-lg font-medium mb-4">Services</h3>
-          <ul className="space-y-3">
-            {footerLinks.services.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:col-span-8">
+          {/* Business & Corporate */}
+          <div>
+            <h3 className="text-lg font-medium mb-4">Business & Corporate</h3>
+            <ul className="space-y-3">
+              {footerLinks.businessCorporate.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Resources */}
-        <div className="md:col-span-2">
-          <h3 className="text-lg font-medium mb-4">Resources</h3>
-          <ul className="space-y-3">
-            {footerLinks.resources.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {/* Healthcare & Social Services */}
+          <div>
+            <h3 className="text-lg font-medium mb-4">Healthcare & Social</h3>
+            <ul className="space-y-3">
+              {footerLinks.healthcareSocial.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Hospitality & Leisure */}
+          <div>
+            <h3 className="text-lg font-medium mb-4">Hospitality & Leisure</h3>
+            <ul className="space-y-3">
+              {footerLinks.hospitalityLeisure.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Newsletter and Social */}
@@ -189,23 +223,6 @@ export default function Footer() {
               </Button>
             </div>
           </div> */}
-
-          <div>
-            <h3 className="text-lg font-medium mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              {footerLinks.social.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {link.icon}
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 

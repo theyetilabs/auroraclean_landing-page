@@ -33,6 +33,14 @@ const testimonials: Testimonial[] = [
     variant: "small",
   },
   {
+    quote: "Prompt and courteous team. Aurora Clean exceeded my expectations!",
+    author: "Robert Taylor",
+    role: "Business Owner",
+    image: "/images/headshot/headshot-04.png",
+    rating: 5,
+    variant: "small",
+  },
+  {
     quote:
       "Great service and friendly staff. Booking was easy, and the results were amazing!",
     author: "Michael Brown",
@@ -78,6 +86,15 @@ const testimonials2: Testimonial[] = [
     image: "/images/headshot/headshot-04.png",
     rating: 5,
     variant: "small",
+  },
+  {
+    quote:
+      "Aurora Clean transformed my home! The team was professional and left everything spotless. Highly recommend!",
+    author: "John Smith",
+    role: "Homeowner",
+    image: "/images/headshot/headshot-01.png",
+    rating: 5,
+    variant: "large",
   },
   {
     quote:
@@ -176,47 +193,50 @@ const InfiniteTestimonials: React.FC = () => {
               {/* First Column */}
               <div className="flex-1">
                 <div className="space-y-6">
-                  {duplicatedTestimonials.map((testimonial, idx) => (
-                    <TestimonialCard
-                      key={`col1-${idx}`}
-                      testimonial={testimonial}
-                      className={
-                        testimonial.variant === "large"
-                          ? "h-[300px]"
-                          : testimonial.variant === "medium"
-                          ? "h-[250px]"
-                          : "h-[200px]"
-                      }
-                    />
-                  ))}
+                  {duplicatedTestimonials
+                    .slice(0, 3)
+                    .map((testimonial, idx) => (
+                      <TestimonialCard
+                        key={`col1-${idx}`}
+                        testimonial={testimonial}
+                        className={
+                          testimonial.variant === "large"
+                            ? "h-[300px]"
+                            : testimonial.variant === "medium"
+                            ? "h-[250px]"
+                            : "h-[200px]"
+                        }
+                      />
+                    ))}
                 </div>
               </div>
 
               {/* Second Column */}
               <div className="flex-1">
                 <div className="space-y-6">
-                  {duplicatedTestimonials.reverse().map((testimonial, idx) => (
-                    <TestimonialCard
-                      key={`col2-${idx}`}
-                      testimonial={testimonial}
-                      className={
-                        testimonial.variant === "large"
-                          ? "h-[300px]"
-                          : testimonial.variant === "medium"
-                          ? "h-[250px]"
-                          : "h-[200px]"
-                      }
-                    />
-                  ))}
+                  {duplicatedTestimonials
+                    .slice(3, 6)
+                    .map((testimonial, idx) => (
+                      <TestimonialCard
+                        key={`col2-${idx}`}
+                        testimonial={testimonial}
+                        className={
+                          testimonial.variant === "large"
+                            ? "h-[300px]"
+                            : testimonial.variant === "medium"
+                            ? "h-[250px]"
+                            : "h-[200px]"
+                        }
+                      />
+                    ))}
                 </div>
               </div>
 
               {/* Third Column */}
               <div className="flex-1">
                 <div className="space-y-6">
-                  {duplicatedTestimonials
-                    .slice(3)
-                    .concat(duplicatedTestimonials.slice(0, 3))
+                  {duplicatedTestimonials2
+                    .slice(0, 3)
                     .map((testimonial, idx) => (
                       <TestimonialCard
                         key={`col3-${idx}`}
@@ -237,47 +257,50 @@ const InfiniteTestimonials: React.FC = () => {
               {/* First Column */}
               <div className="flex-1">
                 <div className="space-y-6">
-                  {duplicatedTestimonials2.map((testimonial, idx) => (
-                    <TestimonialCard
-                      key={`col1-${idx}`}
-                      testimonial={testimonial}
-                      className={
-                        testimonial.variant === "large"
-                          ? "h-[300px]"
-                          : testimonial.variant === "medium"
-                          ? "h-[250px]"
-                          : "h-[200px]"
-                      }
-                    />
-                  ))}
+                  {duplicatedTestimonials2
+                    .slice(3, 6)
+                    .map((testimonial, idx) => (
+                      <TestimonialCard
+                        key={`col1-${idx}`}
+                        testimonial={testimonial}
+                        className={
+                          testimonial.variant === "large"
+                            ? "h-[300px]"
+                            : testimonial.variant === "medium"
+                            ? "h-[250px]"
+                            : "h-[200px]"
+                        }
+                      />
+                    ))}
                 </div>
               </div>
 
               {/* Second Column */}
               <div className="flex-1">
                 <div className="space-y-6">
-                  {duplicatedTestimonials2.reverse().map((testimonial, idx) => (
-                    <TestimonialCard
-                      key={`col2-${idx}`}
-                      testimonial={testimonial}
-                      className={
-                        testimonial.variant === "large"
-                          ? "h-[300px]"
-                          : testimonial.variant === "medium"
-                          ? "h-[250px]"
-                          : "h-[200px]"
-                      }
-                    />
-                  ))}
+                  {duplicatedTestimonials2
+                    .slice(0, 3)
+                    .map((testimonial, idx) => (
+                      <TestimonialCard
+                        key={`col2-${idx}`}
+                        testimonial={testimonial}
+                        className={
+                          testimonial.variant === "large"
+                            ? "h-[300px]"
+                            : testimonial.variant === "medium"
+                            ? "h-[250px]"
+                            : "h-[200px]"
+                        }
+                      />
+                    ))}
                 </div>
               </div>
 
               {/* Third Column */}
               <div className="flex-1">
                 <div className="space-y-6">
-                  {duplicatedTestimonials2
-                    .slice(3)
-                    .concat(duplicatedTestimonials.slice(0, 3))
+                  {duplicatedTestimonials
+                    .slice(3, 6)
                     .map((testimonial, idx) => (
                       <TestimonialCard
                         key={`col3-${idx}`}

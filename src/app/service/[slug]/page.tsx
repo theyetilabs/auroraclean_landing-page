@@ -13,6 +13,7 @@ interface ServiceType {
     category: string;
     description: string;
   }>;
+  included_description: string;
   service_area: {
     region: string;
     suburbs_count: number;
@@ -68,14 +69,17 @@ export default function ServicePage({
           {/* Main Content */}
           <div className="lg:w-2/3">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Save Time and Stress with Professional Home Cleaning
+              {service.service_name}
             </h2>
 
             <p className="text-gray-600 mb-12">
               {service.why_choose_us.description}
             </p>
 
-            <TaskList tasks={service.whats_included} />
+            <TaskList
+              tasks={service.whats_included}
+              included_description={service.included_description}
+            />
 
             {/* Highlights Section */}
             <div className="mt-12 bg-white rounded-lg p-8 shadow-lg">

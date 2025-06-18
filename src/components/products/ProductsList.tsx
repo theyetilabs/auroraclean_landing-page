@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import { useStore } from "@/store/useStore";
 
 const products = [
   {
@@ -30,6 +32,7 @@ const products = [
 ];
 
 export default function ProductsList() {
+  const { openGetQuotes } = useStore();
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,6 +63,12 @@ export default function ProductsList() {
                   ${product.price}
                 </p>
                 <p className="text-gray-600 mb-6">{product.features}</p>
+                <Button
+                  className="w-full bg-[#018D43] text-white hover:bg-[#018D43]/80"
+                  onClick={() => openGetQuotes()}
+                >
+                  Inquire Now
+                </Button>
               </div>
             </motion.div>
           ))}

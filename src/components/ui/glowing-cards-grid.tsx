@@ -27,15 +27,12 @@ export default function GlowingCardsGrid({
   return (
     <div
       className={cn(
-        "grid bg-white gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 auto-rows-fr w-full py-8 px-4",
+        "grid bg-transparent gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 auto-rows-fr w-full py-2 px-4",
         className
       )}
     >
       {cards.map((card, idx) => (
-        <div
-          key={card.title + idx}
-          className={cn("relative", idx === 1 && "row-span-2")}
-        >
+        <div key={card.title + idx} className={cn("relative")}>
           <GlowingEffect
             blur={10}
             spread={30}
@@ -45,12 +42,11 @@ export default function GlowingCardsGrid({
           />
           <Card
             className={cn(
-              "relative z-10 min-h-[180px] h-full flex flex-col justify-between bg-white/80 dark:bg-neutral-900/80 shadow-xl border-none overflow-hidden",
-              card.locked && "opacity-60 pointer-events-none",
-              idx === 1 && "row-span-2"
+              "relative z-10 min-h-[180px] h-full flex flex-col justify-between bg-white/80 dark:bg-neutral-900/80 shadow-lg border-none overflow-hidden",
+              card.locked && "opacity-60 pointer-events-none"
             )}
           >
-            <CardHeader className="flex flex-col items-start gap-4 pb-2">
+            <CardHeader className="flex flex-col items-start gap-2 pb-2">
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-neutral-800">
                 {card.icon ? (
                   card.icon
@@ -71,7 +67,7 @@ export default function GlowingCardsGrid({
                   alt="logo"
                   width={9450}
                   height={9450}
-                  className="w-full h-full max-h-[100px] object-contain rounded-lg overflow-hidden m-2"
+                  className={`w-full h-full max-h-[50px] object-contain rounded-lg overflow-hidden m-2 ${"max-h-[50px]"}`}
                 />
               </div>
               <div className="flex-shrink-2  w-full mb-4 mt-2">

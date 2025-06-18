@@ -9,9 +9,13 @@ interface Task {
 
 interface TaskListProps {
   tasks: Task[];
+  included_description: string;
 }
 
-export default function TaskList({ tasks }: TaskListProps) {
+export default function TaskList({
+  tasks,
+  included_description,
+}: TaskListProps) {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -42,12 +46,9 @@ export default function TaskList({ tasks }: TaskListProps) {
       </div>
 
       <h3 className="text-2xl font-bold text-center mb-6">
-        Our Home Cleaning Task List
+        What&apos;s Included
       </h3>
-      <p className="text-center mb-8">
-        We do the housework you may not have time for. Here are some of the
-        cleaning chores we can take care of for you:
-      </p>
+      <p className="text-center mb-8">{included_description}</p>
 
       <motion.div
         variants={container}

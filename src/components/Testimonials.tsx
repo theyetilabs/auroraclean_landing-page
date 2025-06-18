@@ -136,6 +136,56 @@ export default function Testimonials() {
           />
         </motion.div>
       </div>
+      <div className="absolute bottom-40 left-0 right-0  overflow-visible">
+        <motion.div
+          style={{
+            y: y1,
+            rotate: rotate1,
+            x: useTransform(scrollYProgress, [0, 1], [0, 50]),
+          }}
+          className="absolute left-[10%] bottom-0"
+        >
+          <Image
+            src="/images/Leaf/leaf-01.webp"
+            alt="Aurora Cleaning Services"
+            width={100}
+            height={100}
+            className="w-16 h-16 opacity-70"
+          />
+        </motion.div>
+        <motion.div
+          style={{
+            y: y2,
+            rotate: rotate2,
+            x: useTransform(scrollYProgress, [0, 1], [0, -50]),
+          }}
+          className="absolute left-[5%] bottom-20"
+        >
+          <Image
+            src="/images/Leaf/leaf-02.webp"
+            alt="Aurora Cleaning Services"
+            width={100}
+            height={100}
+            className="w-20 h-20 opacity-60"
+          />
+        </motion.div>
+        <motion.div
+          style={{
+            y: y3,
+            rotate: rotate3,
+            x: useTransform(scrollYProgress, [0, 1], [0, 30]),
+          }}
+          className="absolute left-[12%] bottom-20"
+        >
+          <Image
+            src="/images/Leaf/leaf-03.webp"
+            alt="Aurora Cleaning Services"
+            width={100}
+            height={100}
+            className="w-14 h-14 opacity-50"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }

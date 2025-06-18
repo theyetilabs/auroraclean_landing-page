@@ -27,7 +27,7 @@ const reasons = [
         icon: "♻️",
       },
     ],
-    image: "/images/why-choose-us/wcu-001.png",
+    image: "/images/why-choose-us/1.png",
   },
   {
     title: "Reliability and Punctuality",
@@ -51,7 +51,7 @@ const reasons = [
         icon: "📊",
       },
     ],
-    image: "/images/why-choose-us/wcu-002.png",
+    image: "/images/why-choose-us/2.png",
   },
   {
     title: "Expert Team & Advanced Technology",
@@ -75,7 +75,7 @@ const reasons = [
         icon: "🛡️",
       },
     ],
-    image: "/images/why-choose-us/wcu-003.png",
+    image: "/images/why-choose-us/3.png",
   },
   {
     title: "Tailored Solutions & Client Satisfaction",
@@ -99,7 +99,7 @@ const reasons = [
         icon: "⭐",
       },
     ],
-    image: "/images/why-choose-us/wcu-004.png",
+    image: "/images/why-choose-us/4.png",
   },
   {
     title: "Extensive Experience",
@@ -123,7 +123,7 @@ const reasons = [
         icon: "📈",
       },
     ],
-    image: "/images/why-choose-us/wcu-005.png",
+    image: "/images/why-choose-us/5.png",
   },
   {
     title: "Part of Asta Business Group",
@@ -147,7 +147,7 @@ const reasons = [
         icon: "🌱",
       },
     ],
-    image: "/images/why-choose-us/wcu-006.png",
+    image: "/images/why-choose-us/6.png",
   },
 ];
 

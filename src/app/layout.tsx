@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
+  manifest: "/site.webmanifest",
   keywords: [
     "Cleaning Services Australia",
     "Cleaning Services Nepal",
@@ -41,7 +45,7 @@ export const metadata: Metadata = {
     title: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
     description:
       "Aurora Cleaning Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
-    url: "https://customergroup.com.np",
+    url: "https://auroracleaning.com.au",
     siteName: "Aurora Cleaning Services",
     locale: "en_US",
     type: "website",
