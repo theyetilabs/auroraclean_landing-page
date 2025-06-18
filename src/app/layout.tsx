@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import GetQuotes from "@/components/quotes";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -95,6 +96,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster richColors closeButton />
+
         <FloatingContact />
         <GetQuotes />
       </body>

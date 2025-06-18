@@ -20,7 +20,7 @@ const products = [
     price: 159.99,
     features:
       "Durable, stylish, holds 1,200 wipes, ideal for gyms and studios.",
-    image: "/images/Products/product-02.png",
+    image: "/images/Products/2.png",
   },
   {
     id: 3,

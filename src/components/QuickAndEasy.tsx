@@ -2,6 +2,8 @@
 
 import { Calendar, ClipboardCheck, SmilePlus } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
+import { useStore } from "@/store/useStore";
 
 interface StepProps {
   icon: React.ReactNode;
@@ -77,6 +79,7 @@ const Step: React.FC<StepProps> = ({
 );
 
 export default function QuickAndEasy() {
+  const { openGetQuotes } = useStore();
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-[#f6fbff] to-[#eef6fa] rounded-3xl md:mx-8 mx-2 mt-8 md:mt-16">
       <div className="max-w-6xl mx-auto px-4">
@@ -111,6 +114,14 @@ export default function QuickAndEasy() {
               />
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          <Button
+            className="bg-[#018D43] text-white hover:bg-[#018D43]/80"
+            onClick={openGetQuotes}
+          >
+            Get a Quote
+          </Button>
         </div>
       </div>
     </section>

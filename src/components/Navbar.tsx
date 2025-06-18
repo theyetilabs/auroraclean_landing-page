@@ -95,7 +95,7 @@ const Navbar = () => {
                 {/* Map services into 3 columns, fill with dummy if less than 9 */}
                 {(() => {
                   const columns = 3;
-                  const minItems = 9;
+                  const minItems = 6;
                   const filledServices =
                     services.length < minItems
                       ? [
