@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Send, User, Mail, Phone, Settings, X } from "lucide-react";
 import { toast } from "sonner";
-import { Toaster } from "sonner";
 import { useStore } from "@/store/useStore";
 import emailjs from "@emailjs/browser";
 
@@ -85,7 +84,6 @@ const GetQuotes = () => {
 
   return (
     <>
-      <Toaster richColors closeButton />
       {/* Backdrop */}
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[1000]" />
 

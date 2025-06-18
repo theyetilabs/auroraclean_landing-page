@@ -230,8 +230,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/10 relative z-20">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p className="text-xs flex items-center gap-2 flex-wrap">
-            © 2025 CustomerGroup.com.np. DEVELOPED IN PARTNERSHIP WITH Add
-            commentMore actions
+            © 2025 Aurora Cleaning Services. DEVELOPED IN PARTNERSHIP WITH{" "}
             <Link href="https://theyetilabs.com" target="_blank">
               YETI LABS
             </Link>
