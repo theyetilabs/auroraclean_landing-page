@@ -4,9 +4,15 @@ import Image from "next/image";
 
 const companies = [
   { name: "1", logo: "/images/partners/partners-01.png" },
-  { name: "2", logo: "/images/partners/partners-02.png" },
   { name: "3", logo: "/images/partners/partners-03.png" },
   { name: "4", logo: "/images/partners/partners-04.png" },
+  { name: "5", logo: "/images/partners/partners-05.png" },
+  { name: "6", logo: "/images/partners/partners-06.png" },
+  { name: "7", logo: "/images/partners/partners-07.png" },
+  { name: "8", logo: "/images/partners/partners-08.png" },
+  { name: "9", logo: "/images/partners/partners-09.png" },
+  { name: "10", logo: "/images/partners/partners-10.png" },
+  { name: "11", logo: "/images/partners/partners-11.png" },
 ];
 
 export default function TrustedBy() {

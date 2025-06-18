@@ -11,77 +11,75 @@ import {
 const terms = [
   {
     title: "Introduction",
-    content: `Welcome to Customer Group's Terms and Conditions. By accessing or using our website and services, you agree to comply with and be bound by the following terms. These terms govern your use of our Japanese language training, visa processing, job and study placement, additional training programs, and support facilities (collectively, "Services"). Please read these terms carefully before engaging with our Services. If you do not agree with these terms, you should not use our Services.`,
-  },
-  {
-    title: "1. Acceptance of Terms",
-    content: `By enrolling in our programs, submitting an application, or using our website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, as well as our Privacy Policy. Customer Group reserves the right to update these terms at any time, and such changes will be effective upon posting on our website. Your continued use of our Services after changes are posted constitutes acceptance of the updated terms.`,
-  },
-  {
-    title: "2. Eligibility",
-    content: `You must be at least 18 years of age to use our Services independently. If you are under 18, you may use our Services only with the consent of a parent or legal guardian.
+    content: `Aurora Clean Company is committed to providing exceptional cleaning services across Sydney, NSW, with a focus on transparency, fairness, and customer satisfaction. Our terms of service outline the mutual responsibilities and expectations between Aurora Clean Company and our valued clients. These terms are designed to be clear and straightforward, ensuring a positive experience for all parties involved.
 
-Our Services are primarily intended for Nepali individuals seeking opportunities in Japan through the Specified Skilled Worker (SSW) Program, academic placements, or related support. Customer Group reserves the right to determine eligibility for specific programs at its discretion.`,
+By engaging our services, you agree to the following terms, which govern our cleaning services, including commercial cleaning, school cleaning, carpet cleaning, warehouse cleaning, after-builders cleaning, church cleaning, green cleaning, warehouse sweeping, and warehouse floor scrubbing.`,
   },
   {
-    title: "3. Services Provided",
-    content: `Customer Group offers the following Services:
+    title: "1. Agreement on Price and Frequency",
+    content: `Before commencing services, Aurora Clean Company will conduct an onsite visit to assess your cleaning needs and provide a detailed proposal. This proposal will specify the agreed-upon price, cleaning frequency (e.g., daily, weekly, or monthly), and the service address.
 
-- Japanese Language Training: Curriculum-based classes, JLPT N3 or higher preparation, and charge-free mock tests.
-- Visa Processing: Document arrangement and SSW/student visa processing with a Japanese lawyer.
-- Job and Study Placement: Placement in industries (e.g., Agriculture, Nursing Care, Restaurants) and academic programs (e.g., universities, language schools).
-- Additional Training Programs: JFT Basic & Advanced Classes, Nursing, and Food Service training.
-- Support Facilities: Hostel and bus facilities in Chitwan and Pokhara.
+The service address must match the quoted location, and all terms agreed upon will be documented in the initial contract. This ensures clarity and alignment on the scope of services, whether for a corporate office in Sydney CBD or a school in Parramatta.`,
+  },
+  {
+    title: "2. Invoicing and Payment Terms",
+    content: `Invoices are generated and emailed to the responsible party on the 20th of each month, with payment due within seven days. Timely payment ensures uninterrupted service. Late payments may incur additional fees, which will be communicated in advance.
 
-Customer Group does not guarantee specific outcomes (e.g., visa approval, job placement, or exam success) but will provide reasonable efforts to support your goals.`,
+For inquiries about invoicing, contact us at hello@auroraclean.com.au or 0406158054.`,
   },
   {
-    title: "4. Client Responsibilities",
-    content: `- Accurate Information: You must provide accurate and complete information (e.g., personal details, documents) for visa processing, job/study placement, and enrollment. Customer Group is not liable for delays or rejections due to inaccurate information.
-- Compliance: You agree to comply with all applicable laws, including Japanese immigration laws, and to follow our program guidelines (e.g., attendance, conduct).
-- Timely Submission: You are responsible for submitting required documents and payments on time to avoid delays in processing.`,
+    title: "3. GST",
+    content: `All quoted prices are exclusive of Goods and Services Tax (GST) unless explicitly stated otherwise in the proposal. This aligns with standard Australian business practices, ensuring transparency in pricing.`,
   },
   {
-    title: "5. Visa and Job/Study Placement Outcomes",
-    content: `- No Guarantee: While Customer Group boasts a 99.99% visa success rate and job placement rate, we do not guarantee visa approval, job placement, or study placement, as these decisions are made by third parties (e.g., Japanese immigration authorities, employers, schools).
-- Third-Party Decisions: Customer Group is not liable for decisions made by external entities, including visa rejections, job offer withdrawals, or academic admission denials.
-- Support: We will provide reasonable assistance to address issues, but outcomes remain outside our control.`,
-  },
-  {
-    title: "6. Intellectual Property",
-    content: `All content on our website, including training materials, mock tests, and guides, is the intellectual property of Customer Group. You may not reproduce, distribute, or modify these materials without prior written consent. Materials provided (e.g., books, stationery) are for personal use only during your enrollment.`,
-  },
-  {
-    title: "7. Limitation of Liability",
-    content: `Customer Group is not liable for any indirect, incidental, or consequential damages arising from the use of our Services, including but not limited to loss of income, visa rejections, or academic failures. Our liability is limited to the amount paid for the Services. We are not responsible for circumstances beyond our control, such as changes in immigration laws, employer decisions, or natural disasters.`,
-  },
-  {
-    title: "8. Termination of Services",
-    content: `Customer Group reserves the right to terminate or suspend Services if:
-- You fail to comply with these Terms and Conditions.
-- You provide false or misleading information.
-- You engage in misconduct during training, hostel stays, or interactions with staff/partners.
-- You fail to make timely payments.
+    title: "4. Cleaning Chemicals and Materials",
+    content: `Aurora Clean Company provides all necessary cleaning chemicals and materials, including eco-friendly, TGA-approved products, to ensure high-quality results. If you require special or hypoallergenic cleaning products (e.g., for sensitive environments like childcare centers or medical facilities), please notify us before the first cleaning session.
 
-Upon termination, you will not be entitled to a refund of any fees paid.`,
+We will accommodate such requests where possible, but an additional fee may apply to cover the cost of specialized products. This ensures that our services meet your specific needs while maintaining safety and efficacy.`,
   },
   {
-    title: "9. Privacy and Data Protection",
-    content: `Your personal information is handled in accordance with our Privacy Policy. By using our Services, you consent to the collection, use, and sharing of your data as necessary for visa processing, job/study placement, and other Services. Customer Group will take reasonable measures to protect your data but is not liable for unauthorized access beyond our control.`,
-  },
-  {
-    title: "10. Governing Law and Dispute Resolution",
-    content: `These Terms and Conditions are governed by the laws of Nepal. Any disputes arising from your use of our Services will be resolved through negotiation. If unresolved, disputes will be subject to the exclusive jurisdiction of the courts in Kathmandu, Nepal.`,
-  },
-  {
-    title: "11. Contact Information",
-    content: `If you have questions about these Terms and Conditions, please contact us at:
+    title: "5. Access to Property",
+    content: `The customer is responsible for providing Aurora Clean Company with full access to the property, including all areas specified in the scope of service, at the agreed-upon date and time. This includes ensuring that our cleaners can enter the premises and access areas such as offices, classrooms, or warehouses.
 
-Email: hello@customergroup.com.np
-Phone: +977 9704591439
-Address: Customer Group, Raj Shree Complex (4th floor) Ram Mandir Line, Traffic Chowk, Butwal
+Failure to provide access may result in a "Call Out Fee" (see Section 7).`,
+  },
+  {
+    title: "6. Non-Solicitation of Cleaners",
+    content: `Aurora Clean Company invests significant time and resources in training our professional cleaners to deliver exceptional service. To protect this investment, customers agree not to directly or indirectly engage our cleaners for cleaning services, either personally or through an associated company, for 12 months following the conclusion of the contract.
 
-Last Updated: April 01, 2025`,
+Violation of this clause constitutes a breach of contract, and Aurora Clean Company reserves the right to pursue appropriate remedies.`,
+  },
+  {
+    title: "7. Cancellation Policy",
+    content: `If you need to cancel or reschedule a cleaning session, please provide at least 24 hours' notice by contacting us at hello@auroraclean.com.au or 0406158054.
+
+If a cleaner arrives at the premises but is unable to perform the service due to reasons beyond our control (e.g., lack of access or unforeseen circumstances on the customer's end), a "Call Out Fee" equivalent to 60% of the agreed per-visit price will be charged. This fee compensates for the cleaner's time and travel expenses.`,
+  },
+  {
+    title: "8. Termination of Agreement",
+    content: `Either party may terminate the cleaning agreement by providing written notice specifying the termination date, with at least 45 days' notice required. Written notice can be sent via email to hello@auroraclean.com.au.
+
+This allows both parties sufficient time to adjust plans and ensures a smooth transition.`,
+  },
+  {
+    title: "9. Non-Assignment",
+    content: `The rights and obligations outlined in this agreement are specific to the customer and Aurora Clean Company and may not be transferred or assigned to any other party without written consent from both parties. This ensures that the contract remains binding and clear for the original parties involved.`,
+  },
+  {
+    title: "10. Entire Agreement",
+    content: `This contract represents the complete agreement between Aurora Clean Company and the customer. No other promises, conditions, or agreements, whether oral or written, apply unless explicitly included in this contract.
+
+This agreement supersedes any prior arrangements and governs the scope of routine cleaning services as outlined in the attached scope of service. Any amendments must be made in writing and signed by both parties.`,
+  },
+  {
+    title: "Additional Notes",
+    content: `Aurora Clean Company is dedicated to providing high-quality, eco-friendly cleaning services across Sydney, NSW, serving over 600 suburbs, including Sydney CBD, Bondi, Parramatta, and Manly. Our terms are designed to foster a fair and transparent partnership.
+
+For any questions or clarifications, please contact us at:
+Email: hello@auroraclean.com.au
+Phone: 0406158054
+
+Last Updated: May 28, 2025`,
   },
 ];
 

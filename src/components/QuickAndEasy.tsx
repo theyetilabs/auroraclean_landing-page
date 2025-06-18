@@ -48,7 +48,7 @@ const Step: React.FC<StepProps> = ({
   >
     {/* Floating Number + Icon */}
     <div className="absolute -top-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
-      <div className="bg-gradient-to-b from-blue-500 to-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+      <div className="bg-gradient-to-b from-[#018D43] to-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
         <span className="text-white font-bold text-lg">{`0${index + 1}`}</span>
       </div>
       <div className="-mt-6 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md border-4 border-white">
@@ -63,7 +63,7 @@ const Step: React.FC<StepProps> = ({
     <h3
       className={
         highlight
-          ? "text-blue-600 font-bold text-xl md:text-2xl mb-2 mt-2"
+          ? "text-[#018D43] font-bold text-xl md:text-2xl mb-2 mt-2"
           : "text-gray-900 font-bold text-xl md:text-2xl mb-2 mt-2"
       }
     >
@@ -82,7 +82,7 @@ export default function QuickAndEasy() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-700 mb-2">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#018D43] mb-2">
             Aurora Clean
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">

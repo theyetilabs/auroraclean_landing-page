@@ -16,7 +16,7 @@ const Map = () => {
     <MapContainer
       center={[-33.8688, 151.2093] as LatLngTuple}
       zoom={9}
-      style={{ height: "100%", width: "100%" }}
+      style={{ height: "100%", width: "100%", zIndex: 0 }}
       scrollWheelZoom={false}
     >
       <TileLayer

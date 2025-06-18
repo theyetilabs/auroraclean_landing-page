@@ -14,8 +14,8 @@ const services: Service[] = [
   {
     title: "Gym Cleaning",
     description:
-      "Aurora Clean’s gym cleaning services in Sydney, NSW, keep fitness centers hygienic, odor-free, and inviting, ensuring a positive experience for all users.",
-    image: "/images/Explore/gym-cleaning.png",
+      "Aurora Clean's gym cleaning services in Sydney, NSW, keep fitness centers hygienic, odor-free, and inviting, ensuring a positive experience for all users.",
+    image: "/images/explore-services/Gym-Cleaning.png",
     actionText: "Learn More",
     link: "/service/gym-cleaning",
   },
@@ -23,7 +23,7 @@ const services: Service[] = [
     title: "Office Cleaning",
     description:
       "Ensure your workspace remains spotless, hygienic, and inviting, tailored to your business needs, helping to create a positive impression for clients and a healthy environment for employees.",
-    image: "/images/Explore/residential.png",
+    image: "/images/explore-services/Office-Cleaning.png",
     actionText: "Learn More",
     link: "/service/office-cleaning",
   },
@@ -31,7 +31,7 @@ const services: Service[] = [
     title: "Commercial Cleaning",
     description:
       "Our tailored solutions ensure a clean, safe, and welcoming environment that enhances productivity and leaves a lasting impression on clients and employees.",
-    image: "/images/Explore/Business-and-Corporate-Services.png",
+    image: "/images/explore-services/commercial-cleaning.png",
     actionText: "Learn More",
     link: "/service/commercial-cleaning",
   },
@@ -39,7 +39,7 @@ const services: Service[] = [
     title: "Restaurant & Cafe Cleaning",
     description:
       "Delivers exceptional cleaning services for restaurants and cafes across Sydney, ensuring a pristine and hygienic environment that enhances customer satisfaction and complies with food safety regulations",
-    image: "/images/Explore/restaurant.png",
+    image: "/images/explore-services/Restaurant-&-Cafe-Cleaning.png",
     actionText: "Learn More",
     link: "/service/restaurant-cafe-cleaning",
   },
@@ -47,15 +47,15 @@ const services: Service[] = [
     title: "Aged Care & Disability Homes Cleaning",
     description:
       "provides specialized cleaning services for aged care and disability homes in Sydney, creating safe, hygienic, and comfortable environments for residents and staff.",
-    image: "/images/Explore/aged-care.png",
+    image: "/images/explore-services/age-care-home.png",
     actionText: "Learn More",
     link: "/service/aged-care-disability-homes-cleaning",
   },
   {
-    title: "After-Builders Cleaning",
+    title: "Childcare Cleaning",
     description:
-      "offers expert after-builders cleaning services in Sydney, transforming newly constructed or renovated properties into spotless, move-in-ready spaces.",
-    image: "/images/Explore/builders.png",
+      "prioritizes the health and safety of children with our specialized childcare cleaning services in Sydney, NSW, designed for daycare centers and early learning facilities to create a safe and hygienic environment for young learners.",
+    image: "/images/explore-services/Child-Care.png",
     actionText: "Learn More",
     link: "/service/after-builders-cleaning",
   },
@@ -66,7 +66,7 @@ const CleaningServices: React.FC = () => {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-2">
-          Explore our cleaning Services
+          Explore Our Cleaning Services
         </h2>
         <p className="text-center text-gray-600 mb-20 max-w-2xl mx-auto">
           Professional, reliable, and efficient cleaning solutions for homes and

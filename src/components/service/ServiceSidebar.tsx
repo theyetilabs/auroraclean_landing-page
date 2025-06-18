@@ -62,9 +62,9 @@ export default function ServiceSidebar({
         </div>
       </motion.div>
 
-      <div className="w-full h-auto flex flex-col justify-center items-center rounded-[2.5rem] bg-gradient-to-br from-yellow-300 via-yellow-100 to-green-100 p-8 md:p-12">
+      <div className="w-full h-auto flex flex-col justify-center items-center rounded-[2.5rem] bg-gradient-to-br from-[#018D43] via-[#018D43] to-[#01401e] p-8 md:p-12">
         <div className="flex-1 flex flex-col justify-center items-center text-center">
-          <div className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 leading-snug">
+          <div className="text-xl md:text-4xl font-semibold text-[#01401e] mb-8 leading-snug">
             Looking for the cleaning
             <br />
             service in {region}?
@@ -78,7 +78,7 @@ export default function ServiceSidebar({
                 window.open(`tel:${contact.phone}`, "_blank");
               }}
             >
-              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-yellow-400 text-white text-2xl">
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#01301e] text-white text-2xl">
                 <svg
                   className="w-7 h-7"
                   fill="none"

@@ -11,80 +11,79 @@ import {
 const privacyPolicy = [
   {
     title: "Introduction",
-    content: `At Customer Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard the data you provide when using our website and Services, including Japanese language training, visa processing, job and study placement, additional training programs, and support facilities. By accessing our website or engaging with our Services, you agree to the practices described in this policy. Please read this policy carefully.`,
+    content: `This website is owned and operated by Aurora Clean Company (referred to as "We," "our," and "us" in this Internet Privacy Policy). By using this site (https://www.auroraclean.com.au/), you agree to the terms of this Internet Privacy Policy, which governs the collection and use of personal information you may supply to us through your conduct on the website. This policy is designed to ensure transparency and compliance with applicable privacy laws in Australia, including the Privacy Act 1988 and the Australian Privacy Principles (APPs).`,
   },
   {
-    title: "1. Information We Collect",
-    content: `We may collect the following types of information:
+    title: "Terms and Conditions",
+    content: `We reserve the right, at our discretion, to modify or remove portions of this Internet Privacy Policy at any time. This policy is in addition to any other terms and conditions applicable to the website. We do not make any representations about third-party websites that may be linked to our site.`,
+  },
+  {
+    title: "Personal Information",
+    content: `We recognize the importance of protecting the privacy of information collected about visitors to our website, particularly information that can identify an individual ("personal information"). This Internet Privacy Policy governs how your personal information, obtained through the website, will be handled.
 
-- Personal Information: Name, address, date of birth, contact details (phone, email), passport number, educational background, and work experience, provided during enrollment, visa applications, or job/study placements.
-- Usage Data: Information about your interactions with our website, such as IP address, browser type, and pages visited, collected automatically.
-- Third-Party Data: Information from partners (e.g., Japanese employers, universities) or government authorities (e.g., visa status updates) shared with your consent.`,
-  },
-  {
-    title: "2. How We Collect Information",
-    content: `- Directly from You: When you enroll in courses, apply for visas, seek job/study placement, or use support facilities (e.g., hostels in Chitwan/Pokhara).
-- Automatically: Through cookies and tracking technologies on our website to improve user experience.
-- From Third Parties: With your permission, we may receive data from partners or immigration authorities to facilitate Services.`,
-  },
-  {
-    title: "3. How We Use Your Information",
-    content: `We use your personal information to:
+Personal information is collected only when knowingly and voluntarily submitted. For example, we may collect information such as your name, email address, phone number, or service preferences when you request a quote, make an inquiry, or book a cleaning service. This information is essential to provide you with our professional cleaning services, including commercial cleaning, medical cleaning, and aged care cleaning across Sydney, NSW.
 
-- Provide and manage our Services (e.g., language training, visa processing, job placement).
-- Process payments and communicate about fees or scholarships.
-- Assess eligibility for programs and match you with opportunities (e.g., Agriculture, Nursing Care roles).
-- Comply with legal obligations, such as Japanese immigration laws or Nepali regulations.
-- Improve our website and Services based on usage data.
-- Send updates, promotional materials, or support notifications (with your consent).`,
+If we collect sensitive information, such as health-related data (e.g., specific cleaning requirements for medical or aged care facilities), we will handle it in strict compliance with the Australian Privacy Principles, ensuring it is used only for the purpose for which it was provided and with your consent, unless required by law.`,
   },
   {
-    title: "4. How We Share Your Information",
-    content: `We may share your information with:
+    title: "Use of Information",
+    content: `Personal information submitted to our site is used only for the purpose for which it was provided, such as scheduling cleaning services, responding to inquiries, or improving our website experience. We may also use it for secondary purposes related to the primary purpose, such as sending service confirmations or updates, unless we disclose other uses in this policy or at the time of collection. Copies of correspondence containing personal information are stored as archives for record-keeping and backup purposes only.`,
+  },
+  {
+    title: "Disclosure",
+    content: `We will not disclose your personal information except in the following circumstances:
 
-- Service Providers: Third parties who assist with visa processing, job placement (e.g., 300+ companies/partners), or training delivery, under confidentiality agreements.
-- Legal Authorities: Japanese immigration or Nepali government bodies as required by law.
-- Partners: Employers or educational institutions with your consent for placement purposes.
-- Business Transfers: In the event of a merger, acquisition, or sale of assets, your data may be transferred, subject to this Privacy Policy.
+• Where you have provided consent.
+• Where disclosure is necessary to achieve the purpose for which the information was submitted (e.g., coordinating with third-party service providers to fulfill your cleaning requests).
+• In special situations where we believe in good faith that disclosure is necessary to identify, contact, or bring legal action against anyone damaging, injuring, or interfering with our rights, property, users, or anyone else who could be harmed by such activities.
+• When we believe in good faith that the law requires disclosure, such as in response to a legal request or to comply with regulatory obligations.
 
-We do not sell your personal information to third parties for marketing purposes.`,
+We may engage third parties to provide goods or services on our behalf, such as payment processors or scheduling software providers. In such cases, we may disclose your personal information to those third parties solely to meet your request for goods or services. These third parties are required to adhere to our privacy standards and applicable Australian privacy laws.`,
   },
   {
-    title: "5. Data Security",
-    content: `Customer Group employs reasonable physical, technical, and organizational measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet or electronic storage is 100% secure. We are not liable for breaches beyond our control, and you are encouraged to safeguard your login credentials.`,
-  },
-  {
-    title: "6. Your Rights and Choices",
-    content: `- Access and Correction: You may request access to or correction of your personal information by contacting us.
-- Opt-Out: You can opt out of promotional emails by following the unsubscribe link provided.
-- Data Deletion: We will delete your data upon request, unless required for legal or operational purposes (e.g., visa records).
-- Cookies: You can disable cookies in your browser, though this may affect website functionality.`,
-  },
-  {
-    title: "7. Retention of Information",
-    content: `We retain your personal information only as long as necessary to fulfill the purposes outlined (e.g., visa processing records for 5 years, per Japanese immigration requirements) or as required by law. After this period, data will be securely deleted or anonymized.`,
-  },
-  {
-    title: "8. International Data Transfers",
-    content: `Your information may be transferred to Japan or other countries where our partners or service providers operate. These transfers are conducted in compliance with applicable data protection laws, and we ensure appropriate safeguards are in place.`,
-  },
-  {
-    title: "9. Children's Privacy",
-    content: `Our Services are not intended for individuals under 18 without parental consent. We do not knowingly collect data from minors unless authorized by a guardian. If we become aware of such collection, we will delete the information promptly.`,
-  },
-  {
-    title: "10. Changes to This Privacy Policy",
-    content: `Customer Group may update this Privacy Policy to reflect changes in our practices or legal requirements. Updates will be posted on our website with the "Last Updated" date revised. Your continued use of our Services after changes constitutes acceptance of the new policy.`,
-  },
-  {
-    title: "11. Contact Information",
-    content: `If you have questions about these Terms and Conditions, please contact us at:
+    title: "Security",
+    content: `We strive to ensure the security, integrity, and privacy of personal information submitted to our site. We regularly review and update our security measures in light of current technologies. However, no data transmission over the Internet can be guaranteed to be completely secure.
 
-Email: hello@customergroup.com.np
-Phone: +977 9704591439
-Address: Customer Group, Raj Shree Complex (4th floor) Ram Mandir Line, Traffic Chowk, Butwal
+We will take all reasonable steps to protect the personal information you transmit to us or from our online products and services. Once we receive your transmission, we make our best efforts to ensure its security on our systems.
 
-Last Updated: April 01, 2025`,
+Our employees and contractors who provide services related to our information systems are obligated to respect the confidentiality of any personal information we hold. However, we cannot be held responsible for events arising from unauthorized access to your personal information.`,
+  },
+  {
+    title: "Cookies",
+    content: `Cookies are data that a website transfers to an individual's hard drive for record-keeping purposes. Cookies, which are an industry standard used by most websites, including ours, facilitate a user's ongoing access to and use of the site.
+
+They allow us to customize the website to your needs, such as remembering your preferences or tracking site usage for analytics purposes. If you do not want information collected through cookies, most browsers allow you to deny or accept the cookie feature. However, please note that cookies may be necessary to provide you with certain features of our online services, such as booking forms or personalized content.`,
+  },
+  {
+    title: "Access to Information",
+    content: `We will take all reasonable steps to keep secure any information we hold about you and to ensure it remains accurate and up-to-date. If you discover that information held about you is incorrect, you may contact us to have it corrected.
+
+To access or correct your personal information, please contact us at:
+Email: hello@auroraclean.com.au
+Phone: 0406158054
+
+Our employees and contractors are also obligated to respect the confidentiality of any personal information we hold.`,
+  },
+  {
+    title: "Links to Other Sites",
+    content: `We may provide links to websites outside of our own, as well as to third-party websites. These linked sites are not under our control, and we cannot accept responsibility for their conduct or privacy practices. Before disclosing your personal information on any other website, we advise you to review the terms and conditions and privacy statements of those sites.`,
+  },
+  {
+    title: "Problems or Questions",
+    content: `If we become aware of any ongoing concerns or problems with our website, we will take these issues seriously and work to address them promptly. If you have any further queries relating to this Privacy Policy or wish to report a problem or complaint, please contact us at:
+
+Email: hello@auroraclean.com.au
+Phone: 0406158054`,
+  },
+  {
+    title: "Compliance with Privacy Laws",
+    content: `Aurora Clean Company is committed to complying with all applicable privacy laws and regulations in Australia, including the Privacy Act 1988 and the Australian Privacy Principles (APPs). This includes ensuring that any sensitive information, such as health-related data, if collected, is handled in strict accordance with these principles and only for the purpose for which it was provided, unless required by law.
+
+For example, in our medical cleaning or aged care cleaning services, we may collect information about specific cleaning requirements, which will be treated with the utmost confidentiality and used solely to deliver our services effectively.
+
+For more information about privacy issues in Australia, visit the Office of the Australian Information Commissioner (OAIC).
+
+Last Updated: May 28, 2025`,
   },
 ];
 

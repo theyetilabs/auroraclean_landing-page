@@ -8,9 +8,11 @@ import { Send, User, Mail, Phone, Settings, X } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "sonner";
 import { useStore } from "@/store/useStore";
+import emailjs from "@emailjs/browser";
 
 const GetQuotes = () => {
   const { isGetQuotesOpen, closeGetQuotes } = useStore();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,26 +21,53 @@ const GetQuotes = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Quote Request Sent!", {
-      description: "We'll contact you within 24 hours with your free quote.",
-      duration: 5000,
-      position: "top-center",
-      style: {
-        background: "white",
-        color: "#1f2937",
-        border: "1px solid #e5e7eb",
-      },
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      serviceType: "",
-      message: "",
-    });
-    closeGetQuotes();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone_number: formData.phone,
+          service_type: formData.serviceType,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      toast.success("Quote Request Sent!", {
+        description: "We'll contact you within 24 hours with your free quote.",
+        duration: 5000,
+        position: "top-center",
+        style: {
+          background: "white",
+          color: "#1f2937",
+          border: "1px solid #e5e7eb",
+        },
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        serviceType: "",
+        message: "",
+      });
+      closeGetQuotes();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send quote request", {
+        description: "Please try again later or contact us directly.",
+        duration: 5000,
+        position: "top-center",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -199,12 +228,18 @@ const GetQuotes = () => {
                       required
                     >
                       <option value="">Select a service</option>
-                      <option value="commercial">Commercial Cleaning</option>
-                      <option value="office">Office Cleaning</option>
-                      <option value="medical">Medical Cleaning</option>
-                      <option value="residential">Residential Cleaning</option>
-                      <option value="carpet">Carpet Cleaning</option>
-                      <option value="window">Window Cleaning</option>
+                      <option value="commercial">Business & Corporate</option>
+                      <option value="office">
+                        Healthcare & Social Services
+                      </option>
+                      <option value="medical">Hospitality & Leisure</option>
+                      <option value="residential">Industrial</option>
+                      <option value="residential">
+                        Residential & Specialized
+                      </option>
+                      <option value="residential">Sustainable Practices</option>
+                      <option value="residential">Products</option>
+                      <option value="residential">Others</option>
                     </select>
                   </div>
                 </div>
@@ -244,10 +279,11 @@ const GetQuotes = () => {
                 <div className="pt-6">
                   <Button
                     type="submit"
-                    className="w-full h-14 md:h-16 text-lg md:text-xl font-bold bg-gradient-to-r from-[#018d43] via-[#007436] to-[#01401e] hover:from-[#018d43] hover:via-[#007436] hover:to-[#01401e] rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-4 animate-pulse hover:animate-none"
+                    disabled={isSubmitting}
+                    className="w-full h-14 md:h-16 text-lg md:text-xl font-bold bg-gradient-to-r from-[#018d43] via-[#007436] to-[#01401e] hover:from-[#018d43] hover:via-[#007436] hover:to-[#01401e] rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-4 animate-pulse hover:animate-none disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5 md:w-6 md:h-6" />
-                    Get My Free Quote Now
+                    {isSubmitting ? "Sending..." : "Get My Free Quote Now"}
                   </Button>
                 </div>
               </form>

@@ -42,6 +42,8 @@ export const services = [
           "Comprehensive window and glass cleaning (interior and exterior), carpet and upholstery cleaning, end-of-lease cleaning, spring cleaning, and roof cleaning to maintain all aspects of your property.",
       },
     ],
+    included_description:
+      "Our commercial cleaning services cover every aspect of your business premises to maintain a pristine and hygienic environment. Our comprehensive offerings include:",
     service_area: {
       region: "Greater Sydney",
       suburbs_count: 600,

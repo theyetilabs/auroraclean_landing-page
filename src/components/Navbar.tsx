@@ -193,7 +193,13 @@ const Navbar = () => {
             >
               <span className="text-black font-bold">Why Choose Us?</span>
             </NavLink>
-
+            <NavLink
+              href="/about"
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+              prefetch
+            >
+              <span className="text-black font-bold">About us</span>
+            </NavLink>
             <NavLink href="/contact" setIsMobileMenuOpen={setIsMobileMenuOpen}>
               <span className="text-black font-bold">Contact</span>
             </NavLink>
