@@ -57,7 +57,7 @@ const services: Service[] = [
       "prioritizes the health and safety of children with our specialized childcare cleaning services in Sydney, NSW, designed for daycare centers and early learning facilities to create a safe and hygienic environment for young learners.",
     image: "/images/explore-services/Child-Care.png",
     actionText: "Learn More",
-    link: "/service/after-builders-cleaning",
+    link: "/service/childcare-cleaning",
   },
 ];
 
