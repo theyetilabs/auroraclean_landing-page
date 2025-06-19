@@ -11,8 +11,6 @@ const footerLinks = {
   about: [
     { label: "About Us", href: "/about" },
     { label: "Why Choose Us", href: "/why-choose-us" },
-    { label: "Sustainability", href: "/sustainability" },
-    { label: "Testimonials", href: "/testimonials" },
     { label: "Blog", href: "/blogs" },
     { label: "FAQs", href: "/faq" },
   ],
@@ -20,22 +18,17 @@ const footerLinks = {
     { label: "Commercial Cleaning", href: "/service/commercial-cleaning" },
     { label: "Office Cleaning", href: "/service/office-cleaning" },
     { label: "Strata Cleaning", href: "/service/strata-cleaning" },
-    {
-      label: "Local Government Buildings",
-      href: "/service/government-cleaning",
-    },
-    { label: "Supermarket & Retail", href: "/service/retail-cleaning" },
+    { label: "Supermarket & Retail", href: "/service/supermarket-retail-store-cleaning" },
   ],
   healthcareSocial: [
     { label: "Medical Cleaning", href: "/service/medical-cleaning" },
-    { label: "Aged Care & Disability", href: "/service/aged-care-cleaning" },
+    { label: "Aged Care & Disability", href: "/service/aged-care-disability-homes-cleaning" },
     { label: "Childcare Cleaning", href: "/service/childcare-cleaning" },
-    { label: "School Cleaning", href: "/service/school-cleaning" },
   ],
   hospitalityLeisure: [
-    { label: "Restaurant & Cafe", href: "/service/restaurant-cleaning" },
+    { label: "Restaurant & Cafe", href: "/service/restaurant-cafe-cleaning" },
     { label: "Gym Cleaning", href: "/service/gym-cleaning" },
-    { label: "Airbnb & Short Stay", href: "/service/airbnb-cleaning" },
+    { label: "Airbnb & Short Stay", href: "/service/airbnb-short-stay-rentals-cleaning" },
     { label: "Explore All Services", href: "/services" },
   ],
   resources: [
