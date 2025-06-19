@@ -66,11 +66,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
     images: [
-      {
-        url: "/images/hero-placeholder.png",
+     {
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
+        alt: "Aurora Cleaning Services Logo",
       },
     ],
   },
