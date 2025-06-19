@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
-  manifest: "/site.webmanifest",
   keywords: [
     "Cleaning Services Australia",
     "Cleaning Services Nepal",
