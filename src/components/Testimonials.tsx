@@ -75,7 +75,7 @@ export default function Testimonials() {
               {serviceCategories[activeCategory].services.map((service) => (
                 <li key={service.slug}>
                   <Link
-                    href={`/services/${service.slug}`}
+                    href={`/service/${service.slug}`}
                     className="text-[#018D43] hover:underline hover:text-[#018D43] transition-colors text-lg"
                   >
                     {service.name}
