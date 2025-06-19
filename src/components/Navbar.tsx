@@ -324,7 +324,7 @@ const Navbar = () => {
       {/* Sticky Mobile Consultation Button */}
       <div className="md:hidden fixed bottom-0 left-0 right-0  z-50">
         <a
-          href="https://forms.gle/zUzeXaLBSKGPeUiu7"
+          onClick={() => openGetQuotes()}
           target="_blank"
           className="group flex items-center gap-2 bg-gradient-to-r from-[#018D43] to-transparent hover:bg-[#0099db] text-white px-6 py-3  text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
         >
