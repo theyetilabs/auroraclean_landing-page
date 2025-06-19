@@ -23,13 +23,7 @@ export default function ProductsHero() {
             our high-quality hygiene products at discounted rates, designed to
             maintain cleanliness between our visits.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 bg-[#007436] text-white px-8 py-3 rounded-md font-medium hover:bg-yellow-500 transition-colors duration-300"
-          >
-            Shop Now
-          </motion.button>
+          
         </motion.div>
       </div>
     </div>
