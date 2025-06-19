@@ -38,7 +38,7 @@ const services: Service[] = [
   {
     title: "Restaurant & Cafe Cleaning",
     description:
-      "Delivers exceptional cleaning services for restaurants and cafes across Sydney, ensuring a pristine and hygienic environment that enhances customer satisfaction and complies with food safety regulations",
+      "Delivers exceptional cleaning services for restaurants and cafes across Sydney, ensuring a pristine and hygienic environment that enhances customer satisfaction and complies food safety regulations",
     image: "/images/explore-services/Restaurant-&-Cafe-Cleaning.png",
     actionText: "Learn More",
     link: "/service/restaurant-cafe-cleaning",
