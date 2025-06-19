@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
      {
-        url: "/logo.png",
+        url: "/logo-og.png",
         width: 1200,
         height: 630,
         alt: "Aurora Cleaning Services Logo",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
     description:
       "Aurora Cleaning Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
-    images: ["/logo.png"],
+    images: ["/logo-og.png"],
   },
   robots: {
     index: true,
