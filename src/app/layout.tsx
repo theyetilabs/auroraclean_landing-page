@@ -45,15 +45,15 @@ export const metadata: Metadata = {
 "Medical Cleaning Sydney",
 "Aurora Clean Sydney"
 ].join(", "),
-  authors: [{ name: "Aurora Cleaning Services" }],
-  creator: "Aurora Cleaning Services",
-  publisher: "Aurora Cleaning Services",
+  authors: [{ name: "Aurora Clean Services" }],
+  creator: "Aurora Clean Services",
+  publisher: "Aurora Clean Services",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://auroracleaning.com.au"),
+  metadataBase: new URL("https://auroraclean.com.au"),
   alternates: {
     canonical: "/",
   },
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     title: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
     description:
       "Aurora Cleaning Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
-    url: "https://auroracleaning.com.au",
-    siteName: "Aurora Cleaning Services",
+    url: "https://auroraclean.com.au",
+    siteName: "Aurora Clean Services",
     locale: "en_US",
     type: "website",
     images: [
@@ -70,15 +70,15 @@ export const metadata: Metadata = {
         url: "/logo-og.png",
         width: 1200,
         height: 630,
-        alt: "Aurora Cleaning Services Logo",
+        alt: "Aurora Clean Services Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aurora Cleaning Services - Leading Cleaning Services in Australia",
+    title: "Aurora Clean Services - Leading Cleaning Services in Australia",
     description:
-      "Aurora Cleaning Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
+      "Aurora Clean Services specializes in providing cleaning services to businesses and individuals in Australia. We are a leading cleaning services provider in Australia and we are committed to providing the best cleaning services to our clients.",
     images: ["/logo-og.png"],
   },
   robots: {
@@ -95,9 +95,9 @@ export const metadata: Metadata = {
   // verification: {
   //   google: "your-google-site-verification",
   // },
-  title: "Aurora Cleaning Services",
+  title: "Aurora Clean Services",
   description:
-    "Aurora Cleaning Services - Leading Cleaning Services in Australia",
+    "Aurora Clean Services - Leading Cleaning Services in Australia",
 };
 
 export default function RootLayout({
