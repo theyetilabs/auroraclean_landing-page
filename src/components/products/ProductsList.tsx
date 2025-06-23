@@ -11,43 +11,30 @@ const products = [
     name: "Premium Embossed Antibacterial Wipes 4 x 1200 (Carton)",
     price: 89.99,
     features:
-      "• High Wipe count = less cost, less frequent ordering, less time required from staff to replace rolls
-
-• Strong embossed wood-pulp based fabric
-
-• Kills 99.99% of germs
-
-• Alcohol Fee, Hypoallergenic
-
-• Fresh lemon scent and antibacterial formula
-
-• Compatible with all our dispensers
-
-• Sheet size 15cm x 20cm
-
-• Carton dimensions 44cm W x 44cm D x 22cm
-
-• Roll weight 5.65kg
-
-• Carton weight 23.6kg
-
-PRICE EXCLUDING GST",
+      "Our Premium Embossed Antibacterial Wipes are the most top quality economical Wipes option, using recycled woodpulp.",
     image: "/images/Products/wipes.jpeg",
   },
   {
     id: 2,
-    name: "Matt Black Wipe Dispensers",
+    name: "Antibacterial Wipes Dispenser – Wall Mounted Silicone Nozzle Dispenser",
     price: 39.99,
     features:
-      "Antibacterial Wipes Dispenser – Wall Mounted Silicone Nozzle Dispenser.",
+      "New Silicone Nozzle Wall Mounted Dispenser – A modern design with a matte finish.",
     image: "/images/Products/2.png",
   },
   {
     id: 3,
     name: "Antibacterial Wipes Dispenser + Bin – Freestanding Stainless Steel",
     price: 179.99,
-    features: "Elegant silver finish, easy to refill, holds 1,200 wipes.",
+    features: "Our premium wipes dispenser. A functional solution for when you have limited wallspace. Inbuilt waste bin below Wipes Low maintenance – Minimal movingparts",
     image: "/images/Products/product-03.png",
+  },
+  {
+    id: 4,
+    name: "Antibacterial Wipes Dispenser + Bin (Matt Black Powder Coated)",
+    price: 179.99,
+    features: "Our premium Matte Black wipes dispenser. A functional solution for when you have limited wallspace.Powder Coated a ultimate durability Sleek Black Look.",
+    image: "/images/Products/black_dispenser.jpeg",
   },
 ];
 
