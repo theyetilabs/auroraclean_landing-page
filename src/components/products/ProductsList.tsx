@@ -8,10 +8,30 @@ import { useStore } from "@/store/useStore";
 const products = [
   {
     id: 1,
-    name: "1,200 Wipes x 4-Pack (Carton)",
+    name: "Premium Embossed Antibacterial Wipes 4 x 1200 (Carton)",
     price: 89.99,
     features:
-      "Premium Embossed Antibacterial Wipes 4 x 1200 (Carton),Top quality economical Wipes option, using recycled woodpulp.",
+      "• High Wipe count = less cost, less frequent ordering, less time required from staff to replace rolls
+
+• Strong embossed wood-pulp based fabric
+
+• Kills 99.99% of germs
+
+• Alcohol Fee, Hypoallergenic
+
+• Fresh lemon scent and antibacterial formula
+
+• Compatible with all our dispensers
+
+• Sheet size 15cm x 20cm
+
+• Carton dimensions 44cm W x 44cm D x 22cm
+
+• Roll weight 5.65kg
+
+• Carton weight 23.6kg
+
+PRICE EXCLUDING GST",
     image: "/images/Products/wipes.jpeg",
   },
   {
