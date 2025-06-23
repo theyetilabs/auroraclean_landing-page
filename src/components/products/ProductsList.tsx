@@ -9,23 +9,23 @@ const products = [
   {
     id: 1,
     name: "1,200 Wipes x 4-Pack (Carton)",
-    price: 79.99,
+    price: 89.99,
     features:
-      "Hospital-grade antibacterial wipes, effective against bacteria and viruses.",
-    image: "/images/Products/product-01.png",
+      "Premium Embossed Antibacterial Wipes 4 x 1200 (Carton),Top quality economical Wipes option, using recycled woodpulp.",
+    image: "/images/Products/wipes.jpeg",
   },
   {
     id: 2,
     name: "Matt Black Wipe Dispensers",
-    price: 159.99,
+    price: 39.99,
     features:
-      "Durable, stylish, holds 1,200 wipes, ideal for gyms and studios.",
+      "Antibacterial Wipes Dispenser – Wall Mounted Silicone Nozzle Dispenser.",
     image: "/images/Products/2.png",
   },
   {
     id: 3,
-    name: "Silver Wipe Dispensers",
-    price: 149.99,
+    name: "Antibacterial Wipes Dispenser + Bin – Freestanding Stainless Steel",
+    price: 179.99,
     features: "Elegant silver finish, easy to refill, holds 1,200 wipes.",
     image: "/images/Products/product-03.png",
   },
