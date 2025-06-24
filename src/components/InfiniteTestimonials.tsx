@@ -138,10 +138,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`bg-white rounded-2xl mx-2 p-6 shadow-xl ${className}`}
+      className={`bg-white rounded-2xl mx-2 p-4 sm:p-6 shadow-xl ${className}`}
     >
-      <div className="flex items-center gap-4 mb-4">
-        <div className="relative w-12 h-12 rounded-full overflow-hidden">
+      <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+        <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden">
           <Image
             src={testimonial.image}
             alt={testimonial.author}
@@ -150,15 +150,17 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
         </div>
         <div>
-          <h3 className="font-semibold text-gray-900">{testimonial.author}</h3>
-          <p className="text-sm text-gray-500">{testimonial.role}</p>
+          <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
+            {testimonial.author}
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-500">{testimonial.role}</p>
         </div>
       </div>
-      <div className="flex gap-1 mb-3">
+      <div className="flex gap-1 mb-2 sm:mb-3">
         {[...Array(testimonial.rating)].map((_, i) => (
           <svg
             key={i}
-            className="w-5 h-5 text-yellow-400"
+            className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -166,7 +168,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </svg>
         ))}
       </div>
-      <p className="text-gray-600 leading-relaxed">{testimonial.quote}</p>
+      <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+        {testimonial.quote}
+      </p>
     </motion.div>
   );
 };
@@ -176,19 +180,37 @@ const InfiniteTestimonials: React.FC = () => {
   const duplicatedTestimonials2 = [...testimonials2];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What Our Customers Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied
             customers have to say about our cleaning services.
           </p>
         </div>
         <div className="relative">
-          <div className="w-full flex marquee-container overflow-hidden">
+          {/* Mobile Layout - Single Column (No Marquee) */}
+          <div className="block md:hidden w-full">
+            <div className="w-full max-w-sm mx-auto">
+              <div className="space-y-4">
+                {[...duplicatedTestimonials, ...duplicatedTestimonials2].map(
+                  (testimonial, idx) => (
+                    <TestimonialCard
+                      key={`mobile-${idx}`}
+                      testimonial={testimonial}
+                      className="h-auto min-h-[200px]"
+                    />
+                  )
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout - Three Columns with Marquee */}
+          <div className="hidden md:flex w-full marquee-container overflow-hidden">
             <div className="flex animate-scroll flex-shrink-0 w-full">
               {/* First Column */}
               <div className="flex-1">
@@ -253,7 +275,7 @@ const InfiniteTestimonials: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="flex  animate-scroll flex-shrink-0 w-full">
+            <div className="flex animate-scroll flex-shrink-0 w-full">
               {/* First Column */}
               <div className="flex-1">
                 <div className="space-y-6">
@@ -261,7 +283,7 @@ const InfiniteTestimonials: React.FC = () => {
                     .slice(3, 6)
                     .map((testimonial, idx) => (
                       <TestimonialCard
-                        key={`col1-${idx}`}
+                        key={`col1-2-${idx}`}
                         testimonial={testimonial}
                         className={
                           testimonial.variant === "large"
@@ -282,7 +304,7 @@ const InfiniteTestimonials: React.FC = () => {
                     .slice(0, 3)
                     .map((testimonial, idx) => (
                       <TestimonialCard
-                        key={`col2-${idx}`}
+                        key={`col2-2-${idx}`}
                         testimonial={testimonial}
                         className={
                           testimonial.variant === "large"
@@ -303,7 +325,7 @@ const InfiniteTestimonials: React.FC = () => {
                     .slice(3, 6)
                     .map((testimonial, idx) => (
                       <TestimonialCard
-                        key={`col3-${idx}`}
+                        key={`col3-2-${idx}`}
                         testimonial={testimonial}
                         className={
                           testimonial.variant === "large"
@@ -317,10 +339,11 @@ const InfiniteTestimonials: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Gradient Overlays */}
           </div>
-          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-50 to-transparent z-10"></div>
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
+
+          {/* Gradient Overlays */}
+          <div className="absolute inset-x-0 top-0 h-16 sm:h-32 bg-gradient-to-b from-gray-50 to-transparent z-10"></div>
+          <div className="absolute inset-x-0 bottom-0 h-16 sm:h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
         </div>
       </div>
     </section>
