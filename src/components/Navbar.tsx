@@ -245,7 +245,13 @@ const Navbar = () => {
               <div className="flex flex-col gap-2 cursor-pointer">
                 <button
                   className="text-black font-bold text-xl flex items-center gap-2"
-                  onClick={() => setActiveSubmenu("services")}
+                  onClick={() => {
+                    if (activeSubmenu === "services") {
+                      setActiveSubmenu(null);
+                    } else {
+                      setActiveSubmenu("services");
+                    }
+                  }}
                 >
                   Services{" "}
                   <ChevronDown
