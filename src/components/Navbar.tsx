@@ -245,7 +245,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-2 cursor-pointer">
                 <button
                   className="text-black font-bold text-xl flex items-center gap-2"
-                  onClick={() => router.push("/services")}
+                  onClick={() => setActiveSubmenu("services")}
                 >
                   Services{" "}
                   <ChevronDown
@@ -269,7 +269,10 @@ const Navbar = () => {
                       key={item.slug}
                       href={`/service/${item.slug}`}
                       className="text-gray-700 hover:text-black transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setActiveSubmenu(null);
+                      }}
                     >
                       {item.service_name}
                     </Link>

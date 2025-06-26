@@ -37,7 +37,7 @@ export default function Hero() {
     <>
       <section className="relative min-h-[90vh] overflow-hidden">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="block md:hidden absolute inset-0 w-full h-full">
           <video
             autoPlay
             loop
@@ -50,7 +50,20 @@ export default function Hero() {
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white  w-1/2 " />
         </div>
-
+        <div className="hidden md:block absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/images/hero-image.png"
+          >
+            <source src="/video/hero.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white  w-1/2 " />
+        </div>
         {/* Content */}
         <div className="container relative mx-auto px-4 py-16  md:py-24 font-inter">
           <div className="flex flex-col gap-6 max-w-3xl mt-20  ">
