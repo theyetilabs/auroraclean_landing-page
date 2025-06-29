@@ -222,7 +222,7 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         <div
           className={cn(
-            "md:hidden fixed top-0 left-0 right-0 h-screen bg-white transition-transform duration-300 ease-in-out z-40",
+            "md:hidden fixed top-0 left-0 right-0 h-screen bg-white transition-transform duration-300 ease-in-out z-100 overflow-scroll",
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
